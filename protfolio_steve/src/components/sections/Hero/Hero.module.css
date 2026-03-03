@@ -157,6 +157,10 @@
     opacity: 0.8;
 }
 
+.heroButtonSecondary:hover {
+    opacity: 0.8;
+}
+
 /* IMAGE SIDE */
 
 .imageWrapper {
