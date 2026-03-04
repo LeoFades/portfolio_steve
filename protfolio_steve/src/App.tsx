@@ -3,6 +3,7 @@ import Navbar from './components/layout/Navbar/Navbar'
 import Hero from './components/sections/Hero/Hero'
 import AnimatedContent from './components/ui/FloatIn/FloatIn'
 import Loader from './components/ui/Loader/Loader'
+import Goals from './components/sections/Goals/Goals'
 
 import { useEffect, useState } from "react";
 
@@ -40,6 +41,7 @@ function App() {
         delay={3.5}
       >
         <Hero />
+        <Goals />
       </AnimatedContent>
 
 
