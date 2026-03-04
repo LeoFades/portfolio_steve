@@ -11,7 +11,7 @@ function Loader() {
                     beamWidth={3}
                     beamHeight={30}
                     beamNumber={20}
-                    lightColor="#ffffff"
+                    lightColor="#808080"
                     speed={2}
                     noiseIntensity={1.75}
                     scale={0.2}
