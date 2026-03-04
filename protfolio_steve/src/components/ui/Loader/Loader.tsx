@@ -1,6 +1,6 @@
 import styles from "./Loader.module.css";
 import CountUp from "../CountUp/CountUp";
-import Beams from "@/components/Beams";
+import Beams from "@/components/ui/Beams/Beams";
 
 function Loader() {
     return (
