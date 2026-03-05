@@ -14,3 +14,9 @@
     height: 100vh;
     opacity: 0.5;
 }
+
+.grainient {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
