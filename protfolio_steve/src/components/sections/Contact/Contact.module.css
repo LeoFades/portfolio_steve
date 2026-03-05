@@ -1,0 +1,79 @@
+.contact {
+    background: var(--color-text);
+    color: var(--color-bg);
+    border-top: 1px solid rgba(120, 120, 255, 0.1);
+    padding: 120px 0;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 0 24px;
+    text-align: center;
+}
+
+.title {
+    font-size: 64px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    margin-bottom: 32px;
+}
+
+.subtitle {
+    font-size: 20px;
+    color: var(--color-bg);
+    margin-bottom: 48px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.emailWrapper {
+    margin-bottom: 60px;
+}
+
+.emailLink {
+    font-size: 28px;
+    font-weight: bold;
+    display: inline-flex;
+    gap: 8px;
+    align-items: center;
+    text-decoration: none;
+    color: var(--color-bg);
+    border-bottom: 2px solid transparent;
+    transition: all 0.25s;
+}
+
+.emailLink:hover {
+    color: #7c6cff;
+    border-bottom: 2px solid #7c6cff;
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+}
+
+.icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 1px solid rgba(120, 120, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+}
+
+.icon svg {
+    width: 20px;
+    height: 20px;
+    fill: var(--color-bg);
+}
+
+.icon:hover {
+    background: rgba(120, 120, 255, 0.1);
+    border-color: #7c6cff;
+}

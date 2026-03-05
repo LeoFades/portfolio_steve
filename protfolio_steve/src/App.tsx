@@ -4,6 +4,13 @@ import Hero from './components/sections/Hero/Hero'
 import AnimatedContent from './components/ui/FloatIn/FloatIn'
 import Loader from './components/ui/Loader/Loader'
 import Goals from './components/sections/Goals/Goals'
+import Journey from './components/sections/Journey/Journey'
+import Testimonials from './components/sections/Testimonials/Testimonials'
+import Certifications from './components/sections/Certifications/Certifications'
+import Projects from './components/sections/Projects/Projects'
+import Interests from './components/sections/Interests/Interests'
+import Contact from './components/sections/Contact/Contact'
+import Footer from './components/layout/Footer/Footer'
 
 import { useEffect, useState } from "react";
 
@@ -42,7 +49,16 @@ function App() {
       >
         <Hero />
         <Goals />
+        <Journey />
+        <Certifications />
+        <Projects />
+        <Interests />
+        <Testimonials />
+        <Contact />
+
+
       </AnimatedContent>
+      <Footer />
 
 
 
