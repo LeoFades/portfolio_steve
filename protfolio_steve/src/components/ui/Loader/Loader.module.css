@@ -1,0 +1,41 @@
+.loaderWrapper {
+    position: fixed;
+    inset: 0;
+    background: var(--color-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.loaderContent {
+    text-align: center;
+}
+
+.logo {
+    font-size: 5rem;
+    font-weight: 700;
+    letter-spacing: 26px;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+    color: var(--color-text);
+}
+
+.separator {
+    display: flex;
+    flex-direction: column;
+}
+
+.countUpText {
+    padding-right: 30px;
+    font-weight: 600;
+    font-size: 2rem;
+    color: var(--color-text);
+}
+
+.background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+}
