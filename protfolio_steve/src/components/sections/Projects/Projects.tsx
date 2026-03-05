@@ -1,14 +1,10 @@
 import styles from "./Projects.module.css";
-import { useState } from "react";
-import ProjectModal from "@/components/ui/ProjectModal/ProjectModal";
 
 import project1 from "@/assets/project1.png";
 import project2 from "@/assets/project2.png";
 import project3 from "@/assets/project3.png";
 
 export default function Projects() {
-
-    const [openModal, setOpenModal] = useState(false);
 
     const projects = [
         {
@@ -45,42 +41,31 @@ export default function Projects() {
 
                 <div className={styles.grid}>
                     {projects.map((project, index) => (
-                        <>
+                        <div key={index} className={styles.card}>
 
-                            <div key={index} className={styles.card} onClick={() => setOpenModal(true)}>
+                            <img
+                                src={project.image}
+                                className={styles.image}
+                                alt={project.title}
+                            />
 
-                                <img
-                                    src={project.image}
-                                    className={styles.image}
-                                    alt={project.title}
-                                />
+                            <div className={styles.overlay}>
 
-                                <div className={styles.overlay}>
+                                <span className={styles.projectId}>
+                                    {project.id}
+                                </span>
 
-                                    <span className={styles.projectId}>
-                                        {project.id}
-                                    </span>
+                                <h4 className={styles.projectTitle}>
+                                    {project.title}
+                                </h4>
 
-                                    <h4 className={styles.projectTitle}>
-                                        {project.title}
-                                    </h4>
-
-                                    <p className={styles.description}>
-                                        {project.description}
-                                    </p>
-
-                                </div>
-
+                                <p className={styles.description}>
+                                    {project.description}
+                                </p>
 
                             </div>
 
-                            <ProjectModal
-                                open={openModal}
-                                onClose={() => setOpenModal(false)}
-                            />
-
-                        </>
-
+                        </div>
                     ))}
                 </div>
 
