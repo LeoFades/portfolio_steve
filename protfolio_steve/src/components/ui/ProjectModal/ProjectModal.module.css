@@ -1,12 +1,7 @@
-/* ────────────────────────────────────────────────────────
-   ProjectModal.css
-   Matches the dark hardware-lab / terminal aesthetic
-──────────────────────────────────────────────────────── */
-
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@400;500&family=Syne:wght@400;500;600;700&display=swap');
 
 /* ── Overlay ── */
-.modal-overlay {
+.modalOverlay {
     position: fixed;
     inset: 0;
     background: rgba(0, 0, 0, 0.85);
@@ -31,7 +26,7 @@
 }
 
 /* ── Container ── */
-.modal-container {
+.modalContainer {
     background: #0f0f0f;
     border: 1px solid #252525;
     border-radius: 6px;
@@ -58,7 +53,7 @@
 }
 
 /* ── Header ── */
-.modal-header {
+.modalHeader {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -68,19 +63,19 @@
     flex-shrink: 0;
 }
 
-.modal-header-left {
+.modalHeaderLeft {
     display: flex;
     align-items: center;
     gap: 12px;
 }
 
-.modal-header-icon {
+.modalHeaderIcon {
     color: #555;
     display: flex;
     align-items: center;
 }
 
-.modal-project-name {
+.modalProjectName {
     font-family: 'IBM Plex Mono', monospace;
     font-size: 11px;
     font-weight: 500;
@@ -90,7 +85,7 @@
     text-transform: uppercase;
 }
 
-.modal-archive-ref {
+.modalArchiveRef {
     font-family: 'IBM Plex Mono', monospace;
     font-size: 10px;
     color: #484848;
@@ -99,7 +94,7 @@
     text-transform: uppercase;
 }
 
-.modal-close-btn {
+.modalCloseBtn {
     width: 30px;
     height: 30px;
     border-radius: 4px;
@@ -114,48 +109,48 @@
     flex-shrink: 0;
 }
 
-.modal-close-btn:hover {
+.modalCloseBtn:hover {
     background: #252525;
     color: #fff;
     border-color: #3a3a3a;
 }
 
 /* ── Body ── */
-.modal-body {
+.modalBody {
     overflow-y: auto;
     flex: 1;
     scrollbar-width: thin;
     scrollbar-color: #2a2a2a transparent;
 }
 
-.modal-body::-webkit-scrollbar {
+.modalBody::-webkit-scrollbar {
     width: 4px;
 }
 
-.modal-body::-webkit-scrollbar-track {
+.modalBody::-webkit-scrollbar-track {
     background: transparent;
 }
 
-.modal-body::-webkit-scrollbar-thumb {
+.modalBody::-webkit-scrollbar-thumb {
     background: #2a2a2a;
     border-radius: 2px;
 }
 
 /* ── Hero ── */
-.modal-hero {
+.modalHero {
     position: relative;
     height: 220px;
     overflow: hidden;
 }
 
-.modal-hero-img {
+.modalHeroImg {
     width: 100%;
     height: 100%;
     object-fit: cover;
     filter: brightness(0.45) saturate(0.6);
 }
 
-.modal-hero-overlay {
+.modalHeroOverlay {
     position: absolute;
     inset: 0;
     display: flex;
@@ -165,7 +160,7 @@
     background: linear-gradient(to top, rgba(0, 0, 0, 0.75) 0%, transparent 60%);
 }
 
-.modal-hero-title {
+.modalHeroTitle {
     font-family: 'Bebas Neue', sans-serif;
     font-size: clamp(36px, 5vw, 52px);
     letter-spacing: 0.04em;
@@ -174,7 +169,7 @@
     line-height: 1;
 }
 
-.modal-hero-subtitle {
+.modalHeroSubtitle {
     font-family: 'Syne', sans-serif;
     font-size: 13px;
     color: rgba(255, 255, 255, 0.65);
@@ -183,19 +178,19 @@
 }
 
 /* ── Content grid ── */
-.modal-content-grid {
+.modalContentGrid {
     display: grid;
     grid-template-columns: 1fr 240px;
     gap: 0;
     padding: 0;
 }
 
-.modal-left {
+.modalLeft {
     padding: 24px 28px;
     border-right: 1px solid #1a1a1a;
 }
 
-.modal-right {
+.modalRight {
     padding: 20px 18px;
     display: flex;
     flex-direction: column;
@@ -203,15 +198,15 @@
 }
 
 /* ── Sections ── */
-.modal-section {
+.modalSection {
     margin-bottom: 28px;
 }
 
-.modal-section:last-child {
+.modalSection:last-child {
     margin-bottom: 0;
 }
 
-.modal-section-heading {
+.modalSectionHeading {
     font-family: 'IBM Plex Mono', monospace;
     font-size: 11px;
     font-weight: 500;
@@ -224,13 +219,13 @@
     gap: 8px;
 }
 
-.modal-section-icon {
+.modalSectionIcon {
     color: #555;
     display: flex;
     align-items: center;
 }
 
-.modal-body-text {
+.modalBodyText {
     font-family: 'Syne', sans-serif;
     font-size: 13.5px;
     line-height: 1.7;
@@ -238,12 +233,12 @@
     margin: 0 0 14px;
 }
 
-.modal-body-text:last-child {
+.modalBodyText:last-child {
     margin-bottom: 0;
 }
 
 /* ── Outcomes ── */
-.modal-outcomes-list {
+.modalOutcomesList {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -252,7 +247,7 @@
     gap: 10px;
 }
 
-.modal-outcome-item {
+.modalOutcomeItem {
     font-family: 'Syne', sans-serif;
     font-size: 13px;
     color: #999;
@@ -262,7 +257,7 @@
     line-height: 1.5;
 }
 
-.modal-outcome-check {
+.modalOutcomeCheck {
     color: #4a9c6e;
     flex-shrink: 0;
     margin-top: 1px;
@@ -271,14 +266,14 @@
 }
 
 /* ── Right cards ── */
-.modal-card {
+.modalCard {
     background: #111;
     border: 1px solid #1e1e1e;
     border-radius: 5px;
     padding: 14px;
 }
 
-.modal-card-heading {
+.modalCardHeading {
     font-family: 'IBM Plex Mono', monospace;
     font-size: 10px;
     font-weight: 500;
@@ -292,13 +287,13 @@
 }
 
 /* ── Tags ── */
-.modal-tags {
+.modalTags {
     display: flex;
     flex-wrap: wrap;
     gap: 6px;
 }
 
-.modal-tag {
+.modalTag {
     font-family: 'IBM Plex Mono', monospace;
     font-size: 10px;
     letter-spacing: 0.04em;
@@ -311,20 +306,20 @@
 }
 
 /* ── Specs ── */
-.modal-specs {
+.modalSpecs {
     display: flex;
     flex-direction: column;
     gap: 8px;
 }
 
-.modal-spec-row {
+.modalSpecRow {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
     gap: 8px;
 }
 
-.modal-spec-label {
+.modalSpecLabel {
     font-family: 'IBM Plex Mono', monospace;
     font-size: 9.5px;
     letter-spacing: 0.08em;
@@ -333,7 +328,7 @@
     white-space: nowrap;
 }
 
-.modal-spec-value {
+.modalSpecValue {
     font-family: 'IBM Plex Mono', monospace;
     font-size: 11px;
     font-weight: 500;
@@ -342,7 +337,7 @@
 }
 
 /* ── Footer ── */
-.modal-footer {
+.modalFooter {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -354,12 +349,12 @@
     flex-wrap: wrap;
 }
 
-.modal-footer-actions {
+.modalFooterActions {
     display: flex;
     gap: 10px;
 }
 
-.modal-footer-btn {
+.modalFooterBtn {
     font-family: 'IBM Plex Mono', monospace;
     font-size: 10px;
     letter-spacing: 0.08em;
@@ -376,13 +371,13 @@
     transition: all 0.15s ease;
 }
 
-.modal-footer-btn:hover {
+.modalFooterBtn:hover {
     color: #ddd;
     border-color: #404040;
     background: #181818;
 }
 
-.modal-footer-status {
+.modalFooterStatus {
     font-family: 'IBM Plex Mono', monospace;
     font-size: 9.5px;
     letter-spacing: 0.07em;
@@ -393,34 +388,34 @@
     gap: 8px;
 }
 
-.modal-footer-divider {
+.modalFooterDivider {
     color: #2a2a2a;
 }
 
-.modal-status-value {
+.modalStatusValue {
     color: #555;
 }
 
 /* ── Responsive ── */
 @media (max-width: 680px) {
-    .modal-overlay {
+    .modalOverlay {
         padding: 12px;
     }
 
-    .modal-content-grid {
+    .modalContentGrid {
         grid-template-columns: 1fr;
     }
 
-    .modal-left {
+    .modalLeft {
         border-right: none;
         border-bottom: 1px solid #1a1a1a;
     }
 
-    .modal-hero {
+    .modalHero {
         height: 160px;
     }
 
-    .modal-footer {
+    .modalFooter {
         flex-direction: column;
         align-items: flex-start;
     }

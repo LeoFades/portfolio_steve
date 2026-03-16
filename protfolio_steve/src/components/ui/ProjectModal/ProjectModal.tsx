@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
+import { createPortal } from 'react-dom';
 import type { Project } from '@/pages/Projects/Projects.types';
-import './ProjectModal.module.css';
+import styles from './ProjectModal.module.css';
 
 interface ProjectModalProps {
     project: Project | null;
@@ -11,6 +12,8 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
     const overlayRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
+        if (!project) return;
+
         const handleKey = (e: KeyboardEvent) => { if (e.key === 'Escape') onClose(); };
         document.addEventListener('keydown', handleKey);
         document.body.style.overflow = 'hidden';
@@ -18,7 +21,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
             document.removeEventListener('keydown', handleKey);
             document.body.style.overflow = '';
         };
-    }, [onClose]);
+    }, [onClose, project]);
 
     const handleOverlayClick = (e: React.MouseEvent<HTMLDivElement>) => {
         if (e.target === overlayRef.current) onClose();
@@ -26,14 +29,14 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
 
     if (!project) return null;
 
-    return (
-        <div className="modal-overlay" ref={overlayRef} onClick={handleOverlayClick}>
-            <div className="modal-container" role="dialog" aria-modal="true">
+    return createPortal(
+        <div className={styles.modalOverlay} ref={overlayRef} onClick={handleOverlayClick}>
+            <div className={styles.modalContainer} role="dialog" aria-modal="true">
 
                 {/* ── Header ── */}
-                <div className="modal-header">
-                    <div className="modal-header-left">
-                        <span className="modal-header-icon">
+                <div className={styles.modalHeader}>
+                    <div className={styles.modalHeaderLeft}>
+                        <span className={styles.modalHeaderIcon}>
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                                 <rect x="1" y="1" width="6" height="6" rx="1" stroke="currentColor" strokeWidth="1.5" />
                                 <rect x="9" y="1" width="6" height="6" rx="1" stroke="currentColor" strokeWidth="1.5" />
@@ -42,11 +45,11 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                             </svg>
                         </span>
                         <div>
-                            <p className="modal-project-name">{project.name}</p>
-                            <p className="modal-archive-ref">{project.archiveRef}</p>
+                            <p className={styles.modalProjectName}>{project.name}</p>
+                            <p className={styles.modalArchiveRef}>{project.archiveRef}</p>
                         </div>
                     </div>
-                    <button className="modal-close-btn" onClick={onClose} aria-label="Close modal">
+                    <button className={styles.modalCloseBtn} onClick={onClose} aria-label="Close modal">
                         <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
                             <path d="M1 1L13 13M13 1L1 13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
                         </svg>
@@ -54,25 +57,25 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                 </div>
 
                 {/* ── Scrollable body ── */}
-                <div className="modal-body">
+                <div className={styles.modalBody}>
 
                     {/* Hero */}
-                    <div className="modal-hero">
-                        <img src={project.image} alt={project.title} className="modal-hero-img" />
-                        <div className="modal-hero-overlay">
-                            <h1 className="modal-hero-title">{project.title}</h1>
-                            <p className="modal-hero-subtitle">{project.subtitle}</p>
+                    <div className={styles.modalHero}>
+                        <img src={project.image} alt={project.title} className={styles.modalHeroImg} />
+                        <div className={styles.modalHeroOverlay}>
+                            <h1 className={styles.modalHeroTitle}>{project.title}</h1>
+                            <p className={styles.modalHeroSubtitle}>{project.subtitle}</p>
                         </div>
                     </div>
 
                     {/* Content grid */}
-                    <div className="modal-content-grid">
+                    <div className={styles.modalContentGrid}>
 
                         {/* Left column */}
-                        <div className="modal-left">
-                            <section className="modal-section">
-                                <h2 className="modal-section-heading">
-                                    <span className="modal-section-icon">
+                        <div className={styles.modalLeft}>
+                            <section className={styles.modalSection}>
+                                <h2 className={styles.modalSectionHeading}>
+                                    <span className={styles.modalSectionIcon}>
                                         <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
                                             <rect x="1" y="1" width="12" height="12" rx="1" stroke="currentColor" strokeWidth="1.5" />
                                             <path d="M4 5h6M4 7.5h6M4 10h4" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" />
@@ -81,13 +84,13 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                                     TECHNICAL SUMMARY
                                 </h2>
                                 {project.description.map((para, i) => (
-                                    <p key={i} className="modal-body-text">{para}</p>
+                                    <p key={i} className={styles.modalBodyText}>{para}</p>
                                 ))}
                             </section>
 
-                            <section className="modal-section">
-                                <h2 className="modal-section-heading">
-                                    <span className="modal-section-icon">
+                            <section className={styles.modalSection}>
+                                <h2 className={styles.modalSectionHeading}>
+                                    <span className={styles.modalSectionIcon}>
                                         <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
                                             <path d="M1 4h12M1 8h12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
                                             <path d="M4 1v12M10 1v12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
@@ -95,10 +98,10 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                                     </span>
                                     KEY OUTCOMES
                                 </h2>
-                                <ul className="modal-outcomes-list">
+                                <ul className={styles.modalOutcomesList}>
                                     {project.keyOutcomes.map((outcome, i) => (
-                                        <li key={i} className="modal-outcome-item">
-                                            <span className="modal-outcome-check">
+                                        <li key={i} className={styles.modalOutcomeItem}>
+                                            <span className={styles.modalOutcomeCheck}>
                                                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
                                                     <circle cx="7" cy="7" r="6" stroke="currentColor" strokeWidth="1.2" />
                                                     <path d="M4.5 7L6.5 9L9.5 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
@@ -112,10 +115,10 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                         </div>
 
                         {/* Right column */}
-                        <div className="modal-right">
-                            <div className="modal-card">
-                                <h3 className="modal-card-heading">
-                                    <span className="modal-section-icon">
+                        <div className={styles.modalRight}>
+                            <div className={styles.modalCard}>
+                                <h3 className={styles.modalCardHeading}>
+                                    <span className={styles.modalSectionIcon}>
                                         <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
                                             <circle cx="6" cy="6" r="5" stroke="currentColor" strokeWidth="1.2" />
                                             <circle cx="6" cy="6" r="2" fill="currentColor" />
@@ -123,16 +126,16 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                                     </span>
                                     CORE TECHNOLOGIES
                                 </h3>
-                                <div className="modal-tags">
+                                <div className={styles.modalTags}>
                                     {project.coreTech.map((tech) => (
-                                        <span key={tech} className="modal-tag">{tech}</span>
+                                        <span key={tech} className={styles.modalTag}>{tech}</span>
                                     ))}
                                 </div>
                             </div>
 
-                            <div className="modal-card">
-                                <h3 className="modal-card-heading">
-                                    <span className="modal-section-icon">
+                            <div className={styles.modalCard}>
+                                <h3 className={styles.modalCardHeading}>
+                                    <span className={styles.modalSectionIcon}>
                                         <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
                                             <rect x="1" y="1" width="10" height="10" rx="1" stroke="currentColor" strokeWidth="1.2" />
                                             <path d="M4 4h4M4 6h4M4 8h2" stroke="currentColor" strokeWidth="1" strokeLinecap="round" />
@@ -140,11 +143,11 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                                     </span>
                                     SYSTEM SPECS
                                 </h3>
-                                <div className="modal-specs">
+                                <div className={styles.modalSpecs}>
                                     {project.systemSpecs.map((spec) => (
-                                        <div key={spec.label} className="modal-spec-row">
-                                            <span className="modal-spec-label">{spec.label}</span>
-                                            <span className="modal-spec-value">{spec.value}</span>
+                                        <div key={spec.label} className={styles.modalSpecRow}>
+                                            <span className={styles.modalSpecLabel}>{spec.label}</span>
+                                            <span className={styles.modalSpecValue}>{spec.value}</span>
                                         </div>
                                     ))}
                                 </div>
@@ -154,9 +157,9 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                 </div>
 
                 {/* ── Footer ── */}
-                <div className="modal-footer">
-                    <div className="modal-footer-actions">
-                        <button className="modal-footer-btn">
+                <div className={styles.modalFooter}>
+                    <div className={styles.modalFooterActions}>
+                        <button className={styles.modalFooterBtn}>
                             <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
                                 <circle cx="11" cy="3" r="2" stroke="currentColor" strokeWidth="1.2" />
                                 <circle cx="11" cy="11" r="2" stroke="currentColor" strokeWidth="1.2" />
@@ -165,7 +168,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                             </svg>
                             SHARE_RESOURCE
                         </button>
-                        <button className="modal-footer-btn">
+                        <button className={styles.modalFooterBtn}>
                             <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
                                 <path d="M7 1v8M4 6l3 3 3-3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                                 <path d="M2 11h10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
@@ -173,13 +176,14 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                             GET_DOCS.PDF
                         </button>
                     </div>
-                    <div className="modal-footer-status">
-                        <span>SYSTEM_STATUS:&nbsp;<span className="modal-status-value">{project.systemStatus}</span></span>
-                        <span className="modal-footer-divider">//</span>
-                        <span>VIEW_PORT:&nbsp;<span className="modal-status-value">{project.viewPort}</span></span>
+                    <div className={styles.modalFooterStatus}>
+                        <span>SYSTEM_STATUS:&nbsp;<span className={styles.modalStatusValue}>{project.systemStatus}</span></span>
+                        <span className={styles.modalFooterDivider}>//</span>
+                        <span>VIEW_PORT:&nbsp;<span className={styles.modalStatusValue}>{project.viewPort}</span></span>
                     </div>
                 </div>
             </div>
-        </div>
+        </div>,
+        document.body
     );
 }

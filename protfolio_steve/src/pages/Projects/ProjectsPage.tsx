@@ -1,8 +1,9 @@
 import { useState, useMemo } from 'react';
-import type { Project } from './Projects.types.ts';
+import type { Project } from './Projects.types';
 import projectsData from '@/data/projects.json';
-import ProjectModal from '@/components/ui/ProjectModal/ProjectModal.tsx';
-import './ProjectsPage.module.css';
+import ProjectModal from '@/components/ui/ProjectModal/ProjectModal';
+import styles from './ProjectsPage.module.css';
+import AnimatedContent from '@/components/ui/FloatIn/FloatIn';
 
 type Category = 'All Projects' | 'Hardware' | 'Software' | 'VLSI' | 'Research';
 type SortOption = 'Recent' | 'Alphabetical';
@@ -86,131 +87,135 @@ export default function ProjectsPage() {
     };
 
     return (
-        <div className="projects-page">
+        <div className={styles.projectsContainer}>
+            <AnimatedContent>
+                <div className={styles.projectsPage}>
 
-            {/* ── Page header ── */}
-            <header className="projects-header">
-                <h1 className="projects-title">ALL PROJECTS</h1>
-                <p className="projects-subtitle">
-                    A comprehensive repository of engineering ventures, technical<br />
-                    implementations, and architectural explorations across multiple domains.
-                </p>
-            </header>
+                    {/* ── Page header ── */}
+                    <header className={styles.projectsHeader}>
+                        <h1 className={styles.projectsTitle}>ALL PROJECTS</h1>
+                        <p className={styles.projectsSubtitle}>
+                            A comprehensive repository of engineering ventures, technical<br />
+                            implementations, and architectural explorations across multiple domains.
+                        </p>
+                    </header>
 
-            {/* ── Filters row ── */}
-            <div className="projects-filters-row">
-                <div className="projects-filter-tabs">
-                    {CATEGORIES.map((cat) => (
-                        <button
-                            key={cat}
-                            className={`filter-tab ${activeCategory === cat ? 'filter-tab--active' : ''}`}
-                            onClick={() => handleCategoryChange(cat)}
-                        >
-                            {cat !== 'All Projects' && (
-                                <span className="filter-tab-icon">{CATEGORY_ICONS[cat]}</span>
-                            )}
-                            {cat}
-                        </button>
-                    ))}
-                </div>
+                    {/* ── Filters row ── */}
+                    <div className={styles.projectsFiltersRow}>
+                        <div className={styles.projectsFilterTabs}>
+                            {CATEGORIES.map((cat) => (
+                                <button
+                                    key={cat}
+                                    className={`${styles.filterTab} ${activeCategory === cat ? styles.filterTabActive : ''}`}
+                                    onClick={() => handleCategoryChange(cat)}
+                                >
+                                    {cat !== 'All Projects' && (
+                                        <span className={styles.filterTabIcon}>{CATEGORY_ICONS[cat]}</span>
+                                    )}
+                                    {cat}
+                                </button>
+                            ))}
+                        </div>
 
-                <div className="projects-sort">
-                    <span className="sort-label">Sort by:</span>
-                    <select className="sort-select" value={sortBy} onChange={handleSortChange}>
-                        {SORT_OPTIONS.map((opt) => (
-                            <option key={opt} value={opt}>{opt}</option>
-                        ))}
-                    </select>
-                    <span className="sort-chevron">
-                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
-                            <path d="M2 4L5 7L8 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                        </svg>
-                    </span>
-                </div>
-            </div>
+                        <div className={styles.projectsSort}>
+                            <span className={styles.sortLabel}>Sort by:</span>
+                            <select className={styles.sortSelect} value={sortBy} onChange={handleSortChange}>
+                                {SORT_OPTIONS.map((opt) => (
+                                    <option key={opt} value={opt}>{opt}</option>
+                                ))}
+                            </select>
+                            <span className={styles.sortChevron}>
+                                <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+                                    <path d="M2 4L5 7L8 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
 
-            {/* ── Grid ── */}
-            {paginated.length > 0 ? (
-                <div className="projects-grid">
-                    {paginated.map((project) => (
-                        <ProjectCard
-                            key={project.id}
-                            project={project}
-                            onClick={() => setSelectedProject(project)}
-                        />
-                    ))}
-                </div>
-            ) : (
-                <div className="projects-empty">
-                    <p>No projects found in this category.</p>
-                </div>
-            )}
-
-            {/* ── Pagination ── */}
-            {totalPages > 1 && (
-                <div className="projects-pagination">
-                    <button
-                        className="page-btn page-btn--arrow"
-                        onClick={() => setCurrentPage((p) => Math.max(1, p - 1))}
-                        disabled={currentPage === 1}
-                        aria-label="Previous page"
-                    >
-                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-                            <path d="M7.5 2L3.5 6L7.5 10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                        </svg>
-                    </button>
-
-                    {getPaginationRange().map((item, i) =>
-                        item === '...' ? (
-                            <span key={`ellipsis-${i}`} className="page-ellipsis">…</span>
-                        ) : (
-                            <button
-                                key={item}
-                                className={`page-btn ${currentPage === item ? 'page-btn--active' : ''}`}
-                                onClick={() => setCurrentPage(item as number)}
-                            >
-                                {item}
-                            </button>
-                        )
+                    {/* ── Grid ── */}
+                    {paginated.length > 0 ? (
+                        <div className={styles.projectsGrid}>
+                            {paginated.map((project) => (
+                                <ProjectCard
+                                    key={project.id}
+                                    project={project}
+                                    onClick={() => setSelectedProject(project)}
+                                />
+                            ))}
+                        </div>
+                    ) : (
+                        <div className={styles.projectsEmpty}>
+                            <p>No projects found in this category.</p>
+                        </div>
                     )}
 
-                    <button
-                        className="page-btn page-btn--arrow"
-                        onClick={() => setCurrentPage((p) => Math.min(totalPages, p + 1))}
-                        disabled={currentPage === totalPages}
-                        aria-label="Next page"
-                    >
-                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-                            <path d="M4.5 2L8.5 6L4.5 10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                        </svg>
-                    </button>
-                </div>
-            )}
+                    {/* ── Pagination ── */}
+                    {totalPages > 1 && (
+                        <div className={styles.projectsPagination}>
+                            <button
+                                className={`${styles.pageBtn} ${styles.pageBtnArrow}`}
+                                onClick={() => setCurrentPage((p) => Math.max(1, p - 1))}
+                                disabled={currentPage === 1}
+                                aria-label="Previous page"
+                            >
+                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                                    <path d="M7.5 2L3.5 6L7.5 10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                                </svg>
+                            </button>
 
-            {/* ── Pro-tip banner ── */}
-            {showTip && (
-                <div className="projects-tip">
-                    <span className="projects-tip-icon">
-                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                            <circle cx="7" cy="7" r="6" stroke="currentColor" strokeWidth="1.2" />
-                            <path d="M7 6.5v4M7 4.5v.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-                        </svg>
-                    </span>
-                    <div>
-                        <p className="tip-title">Pro-tip</p>
-                        <p className="tip-body">Click any project card to open its technical specification modal and performance benchmarks.</p>
-                    </div>
-                    <button className="tip-dismiss" onClick={() => setShowTip(false)}>Dismiss</button>
-                </div>
-            )}
+                            {getPaginationRange().map((item, i) =>
+                                item === '...' ? (
+                                    <span key={`ellipsis-${i}`} className={styles.pageEllipsis}>…</span>
+                                ) : (
+                                    <button
+                                        key={item}
+                                        className={`${styles.pageBtn} ${currentPage === item ? styles.pageBtnActive : ''}`}
+                                        onClick={() => setCurrentPage(item as number)}
+                                    >
+                                        {item}
+                                    </button>
+                                )
+                            )}
 
-            {/* ── Modal ── */}
-            {selectedProject && (
-                <ProjectModal
-                    project={selectedProject}
-                    onClose={() => setSelectedProject(null)}
-                />
-            )}
+                            <button
+                                className={`${styles.pageBtn} ${styles.pageBtnArrow}`}
+                                onClick={() => setCurrentPage((p) => Math.min(totalPages, p + 1))}
+                                disabled={currentPage === totalPages}
+                                aria-label="Next page"
+                            >
+                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                                    <path d="M4.5 2L8.5 6L4.5 10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                                </svg>
+                            </button>
+                        </div>
+                    )}
+
+                    {/* ── Pro-tip banner ── */}
+                    {showTip && (
+                        <div className={styles.projectsTip}>
+                            <span className={styles.projectsTipIcon}>
+                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                                    <circle cx="7" cy="7" r="6" stroke="currentColor" strokeWidth="1.2" />
+                                    <path d="M7 6.5v4M7 4.5v.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+                                </svg>
+                            </span>
+                            <div>
+                                <p className={styles.tipTitle}>Pro-tip</p>
+                                <p className={styles.tipBody}>Click any project card to open its technical specification modal and performance benchmarks.</p>
+                            </div>
+                            <button className={styles.tipDismiss} onClick={() => setShowTip(false)}>Dismiss</button>
+                        </div>
+                    )}
+
+                    {/* ── Modal ── */}
+                    {selectedProject && (
+                        <ProjectModal
+                            project={selectedProject}
+                            onClose={() => setSelectedProject(null)}
+                        />
+                    )}
+                </div>
+            </AnimatedContent>
         </div>
     );
 }
@@ -226,19 +231,19 @@ function ProjectCard({ project, onClick }: ProjectCardProps) {
 
     return (
         <article
-            className="project-card"
+            className={styles.projectCard}
             onClick={onClick}
             tabIndex={0}
             onKeyDown={(e: React.KeyboardEvent<HTMLElement>) => { if (e.key === 'Enter') onClick(); }}
         >
-            <div className="card-image-wrap">
-                <img src={project.image} alt={project.title} className="card-image" />
+            <div className={styles.cardImageWrap}>
+                <img src={project.image} alt={project.title} className={styles.cardImage} />
             </div>
-            <div className="card-body">
-                <div className="card-title-row">
-                    <h2 className="card-title">{project.title}</h2>
+            <div className={styles.cardBody}>
+                <div className={styles.cardTitleRow}>
+                    <h2 className={styles.cardTitle}>{project.title}</h2>
                     <span
-                        className="card-badge"
+                        className={styles.cardBadge}
                         style={{
                             background: catStyle.bg,
                             color: catStyle.color,
@@ -248,10 +253,10 @@ function ProjectCard({ project, onClick }: ProjectCardProps) {
                         {project.category.toUpperCase()}
                     </span>
                 </div>
-                <p className="card-summary">{project.summary}</p>
-                <div className="card-tags">
+                <p className={styles.cardSummary}>{project.summary}</p>
+                <div className={styles.cardTags}>
                     {project.tags.slice(0, 3).map((tag) => (
-                        <span key={tag} className="card-tag">{tag}</span>
+                        <span key={tag} className={styles.cardTag}>{tag}</span>
                     ))}
                 </div>
             </div>
