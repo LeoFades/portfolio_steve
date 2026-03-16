@@ -1,0 +1,348 @@
+[
+    {
+        "id": 1,
+        "slug": "student-study-planner",
+        "name": "STUDENT STUDY PLANNER SYSTEM",
+        "archiveRef": "FYP-2025 // BEST GROUP AWARD",
+        "title": "STUDENT STUDY PLANNER",
+        "subtitle": "Full-Stack Academic Management Platform for Institutions",
+        "category": "Software",
+        "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&q=80",
+        "tags": [
+            "Next.js",
+            "React",
+            "Prisma",
+            "Supabase",
+            "PostgreSQL",
+            "MSAL"
+        ],
+        "coreTech": [
+            "Next.js",
+            "React",
+            "Prisma ORM",
+            "Supabase",
+            "PostgreSQL",
+            "Microsoft Entra ID",
+            "Vercel"
+        ],
+        "summary": "A full-stack web application built for Swinburne University's Head of Departments, enabling multi-tier role-based management of student academic plans, unit assignments, and course structures. The system supports five RBAC tiers with granular permissions, real-time audit logging, and a dynamic study planner generation engine.",
+        "description": [
+            "Architected and delivered a production-grade Next.js application with Prisma ORM and Supabase/PostgreSQL as the persistence layer. Authentication is handled via Microsoft Entra ID (MSAL) with httpOnly cookie-based JWT validation, ensuring compliance with institutional SSO requirements.",
+            "Led frontend theming (light/dark mode), Jest test suites, and end-to-end security hardening including CSP headers, Snyk static analysis, OWASP ZAP dynamic scanning, and TruffleHog secrets detection. Deployed on Vercel with CI/CD pipelines."
+        ],
+        "keyOutcomes": [
+            "Won Swinburne University's Best Group Project Award and adopted by the IT department.",
+            "Implemented five-tier RBAC with full audit trail across all privileged operations.",
+            "Achieved zero critical vulnerabilities post-ZAP scan and Snyk static analysis.",
+            "Reduced manual study plan generation time by an estimated 60% for coordinators."
+        ],
+        "systemSpecs": [
+            {
+                "label": "FRAMEWORK",
+                "value": "Next.js 14 (App Router)"
+            },
+            {
+                "label": "DATABASE",
+                "value": "PostgreSQL via Supabase"
+            },
+            {
+                "label": "AUTH",
+                "value": "Microsoft Entra ID (MSAL)"
+            },
+            {
+                "label": "DEPLOYMENT",
+                "value": "Vercel + GitHub Actions"
+            }
+        ],
+        "systemStatus": "DEPLOYED",
+        "viewPort": "0xA1F3"
+    },
+    {
+        "id": 2,
+        "slug": "iot-environmental-monitor",
+        "name": "IOT ENVIRONMENTAL MONITOR",
+        "archiveRef": "PROJ-IOT-2025 // ESP32 MESH",
+        "title": "IOT ENV MONITOR",
+        "subtitle": "Distributed Wireless Sensor Network for Environmental Intelligence",
+        "category": "Hardware",
+        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80",
+        "tags": [
+            "ESP32",
+            "AWS IoT Core",
+            "MQTT",
+            "C++",
+            "FreeRTOS"
+        ],
+        "coreTech": [
+            "ESP32 / Xiao ESP32C3",
+            "AWS IoT Core",
+            "MQTT",
+            "ADXL345",
+            "DHT11/SHT31",
+            "FreeRTOS",
+            "OLED SSD1306"
+        ],
+        "summary": "A distributed IoT sensor network built on ESP32 microcontrollers for dual-purpose environmental monitoring: plant health tracking and illegal logging detection via vibration analysis. Sensor nodes communicate over MQTT to AWS IoT Core for cloud aggregation and alerting.",
+        "description": [
+            "Developed firmware in C++ targeting ESP32 and Xiao ESP32C3 boards, integrating the ADXL345 accelerometer for vibration-based anomaly detection, DHT11/SHT31 for temperature and humidity, and a GPS module for geolocation tagging of alert events.",
+            "Designed a low-power duty-cycle scheme to extend field battery life. Sensor data is serialized as JSON payloads over MQTT to AWS IoT Core, where rules engine triggers SNS alerts on threshold violations. OLED displays provide local node status."
+        ],
+        "keyOutcomes": [
+            "Achieved reliable MQTT telemetry delivery across multi-node mesh at 30-second intervals.",
+            "ADXL345 vibration thresholds successfully flagged simulated chainsaw events in lab conditions.",
+            "Integrated GPS coordinates into MQTT payloads for incident geolocation on AWS IoT maps.",
+            "Designed modular firmware architecture enabling swappable sensor drivers."
+        ],
+        "systemSpecs": [
+            {
+                "label": "MCU",
+                "value": "ESP32 / Xiao ESP32C3"
+            },
+            {
+                "label": "PROTOCOL",
+                "value": "MQTT over TLS"
+            },
+            {
+                "label": "CLOUD",
+                "value": "AWS IoT Core + SNS"
+            },
+            {
+                "label": "SENSORS",
+                "value": "ADXL345, SHT31, GPS"
+            }
+        ],
+        "systemStatus": "FIELD-READY",
+        "viewPort": "0xC4D1"
+    },
+    {
+        "id": 3,
+        "slug": "zabbix-network-monitoring",
+        "name": "ZABBIX MONITORING POC",
+        "archiveRef": "INTERN-2024 // SWINBURNE IT",
+        "title": "ZABBIX MONITORING POC",
+        "subtitle": "Enterprise Network Monitoring Proof-of-Concept — Cost Reduction Initiative",
+        "category": "Research",
+        "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=80",
+        "tags": [
+            "Zabbix",
+            "Grafana",
+            "PRTG",
+            "Trend Vision One",
+            "Linux"
+        ],
+        "coreTech": [
+            "Zabbix",
+            "Grafana",
+            "PRTG",
+            "Trend Vision One",
+            "ANY.RUN",
+            "Linux",
+            "SNMP"
+        ],
+        "summary": "Designed and implemented a Zabbix + Grafana monitoring stack as a cost-effective alternative to PRTG during a Swinburne IT department internship. Conducted endpoint security audits across hundreds of campus devices and performed malware behavioral analysis using ANY.RUN sandbox.",
+        "description": [
+            "Executed a full IT asset inventory across the Swinburne Sarawak campus, auditing endpoint security posture via Trend Vision One. Documented findings and produced remediation reports covering patch compliance, agent health, and policy gaps across Windows and macOS endpoints.",
+            "Deployed a Zabbix POC with Grafana dashboards, demonstrating feature parity with PRTG at significantly lower licensing cost. The initiative was formally presented to IT leadership with a cost-benefit analysis supporting a transition recommendation."
+        ],
+        "keyOutcomes": [
+            "Audited 200+ campus endpoints for policy compliance using Trend Vision One.",
+            "Delivered a Zabbix POC that matched PRTG feature coverage at reduced licensing cost.",
+            "Identified and reported 3 active malware samples via ANY.RUN behavioral sandbox analysis.",
+            "Produced formal IT documentation and presented findings to department stakeholders."
+        ],
+        "systemSpecs": [
+            {
+                "label": "SCOPE",
+                "value": "200+ Endpoints"
+            },
+            {
+                "label": "TOOLING",
+                "value": "Zabbix, Grafana, Zabbix"
+            },
+            {
+                "label": "ANALYSIS",
+                "value": "ANY.RUN Sandbox"
+            },
+            {
+                "label": "OUTCOME",
+                "value": "Cost Reduction POC"
+            }
+        ],
+        "systemStatus": "COMPLETED",
+        "viewPort": "0xE7B2"
+    },
+    {
+        "id": 4,
+        "slug": "plant-species-classifier",
+        "name": "PLANT SPECIES CLASSIFIER",
+        "archiveRef": "COS30082-2025 // APPLIED ML",
+        "title": "PLANT SPECIES CLASSIFIER",
+        "subtitle": "Domain-Adaptive Species Classification via DINOv2 Feature Extraction",
+        "category": "Research",
+        "image": "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?w=800&q=80",
+        "tags": [
+            "Python",
+            "DINOv2",
+            "scikit-learn",
+            "SVM",
+            "Random Forest"
+        ],
+        "coreTech": [
+            "Python",
+            "DINOv2 (ViT-B/14)",
+            "scikit-learn",
+            "Random Forest",
+            "SVM",
+            "DANN",
+            "Prototypical Networks"
+        ],
+        "summary": "A machine learning pipeline for plant species classification addressing the herbarium-to-field domain gap. Leveraged DINOv2 (ViT-B/14) as a frozen feature extractor, evaluated Random Forest and SVM classifiers, and explored domain adaptation techniques including DANN and Prototypical Networks.",
+        "description": [
+            "Built a feature extraction pipeline using Meta's DINOv2 ViT-B/14 model, generating 768-dimensional embeddings for both herbarium specimen images and real-world field photographs. The domain gap between controlled herbarium scans and varied field conditions presented the core classification challenge.",
+            "Benchmarked Random Forest and SVM classifiers on extracted features with hyperparameter tuning. Explored Prototypical Networks for few-shot generalization and Domain-Adversarial Neural Networks (DANN) for explicit domain adaptation, analyzing accuracy trade-offs across methods."
+        ],
+        "keyOutcomes": [
+            "Achieved top-1 accuracy of 87.3% on held-out field image test set using SVM + DINOv2 features.",
+            "Demonstrated 12% accuracy improvement over baseline ResNet-50 transfer learning approach.",
+            "Prototypical Networks showed strong few-shot generalization on rare species subsets.",
+            "Produced full ablation study comparing feature extractor choices and classifier architectures."
+        ],
+        "systemSpecs": [
+            {
+                "label": "BACKBONE",
+                "value": "DINOv2 ViT-B/14"
+            },
+            {
+                "label": "CLASSIFIERS",
+                "value": "SVM, Random Forest"
+            },
+            {
+                "label": "DATASET",
+                "value": "Herbarium + Field Images"
+            },
+            {
+                "label": "TOP-1 ACC.",
+                "value": "87.3%"
+            }
+        ],
+        "systemStatus": "ARCHIVED",
+        "viewPort": "0x3F9A"
+    },
+    {
+        "id": 5,
+        "slug": "aws-ha-file-manager",
+        "name": "AWS HA FILE MANAGER",
+        "archiveRef": "COS20019-2025 // CLOUD COMPUTING",
+        "title": "AWS HA FILE MANAGER",
+        "subtitle": "Highly Available Cloud File Manager on AWS Multi-AZ Infrastructure",
+        "category": "Software",
+        "image": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&q=80",
+        "tags": [
+            "AWS",
+            "EC2",
+            "RDS",
+            "S3",
+            "ALB",
+            "VPC",
+            "Auto Scaling"
+        ],
+        "coreTech": [
+            "AWS VPC",
+            "EC2 + Auto Scaling",
+            "RDS (Multi-AZ)",
+            "S3",
+            "Application Load Balancer",
+            "CloudFront",
+            "Route 53"
+        ],
+        "summary": "Designed and deployed a highly available web-based file manager on AWS, spanning a custom VPC with public/private subnets across multiple availability zones. The architecture leverages EC2 Auto Scaling Groups, an Application Load Balancer, RDS Multi-AZ for persistence, and S3 for object storage.",
+        "description": [
+            "Architected a three-tier web application within a custom AWS VPC using public subnets for the ALB and private subnets for EC2 application instances and RDS. Auto Scaling Groups with launch templates ensure horizontal scalability under variable load conditions.",
+            "Configured RDS MySQL with Multi-AZ standby for automatic failover, S3 bucket policies for secure file object storage, and ALB listener rules for traffic distribution. Infrastructure provisioned via AWS Console and documented with architecture diagrams for academic assessment."
+        ],
+        "keyOutcomes": [
+            "Achieved 99.9% simulated uptime SLA across AZ failover tests with RDS Multi-AZ.",
+            "ALB correctly distributed traffic across 3 EC2 instances under load simulation.",
+            "S3 lifecycle policies configured for cost-optimized cold storage tiering.",
+            "Full VPC network diagram and security group matrix produced in deliverables."
+        ],
+        "systemSpecs": [
+            {
+                "label": "REGION",
+                "value": "ap-southeast-1 (SG)"
+            },
+            {
+                "label": "COMPUTE",
+                "value": "EC2 + Auto Scaling"
+            },
+            {
+                "label": "DATABASE",
+                "value": "RDS MySQL Multi-AZ"
+            },
+            {
+                "label": "STORAGE",
+                "value": "Amazon S3"
+            }
+        ],
+        "systemStatus": "ARCHIVED",
+        "viewPort": "0x91CD"
+    },
+    {
+        "id": 6,
+        "slug": "metamorphic-testing-suite",
+        "name": "METAMORPHIC TESTING SUITE",
+        "archiveRef": "SWE30009-2025 // SOFTWARE TESTING",
+        "title": "METAMORPHIC TEST SUITE",
+        "subtitle": "Automated Mutation Testing & CI/CD Pipeline for Billing System Validation",
+        "category": "Software",
+        "image": "https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=800&q=80",
+        "tags": [
+            "C#",
+            "NUnit",
+            "Selenium",
+            "GitHub Actions",
+            "Jest",
+            "Mutation Testing"
+        ],
+        "coreTech": [
+            "C# / .NET",
+            "NUnit",
+            "Stryker Mutator",
+            "Selenium WebDriver",
+            "GitHub Actions",
+            "Jest",
+            "CI/CD"
+        ],
+        "summary": "Developed a comprehensive software testing suite covering metamorphic testing, mutation testing, Selenium UI automation, and Jest unit testing across two systems: a dessert shop billing engine in C# and a Student Study Planner web application. CI/CD integration via GitHub Actions automates test execution on every push.",
+        "description": [
+            "Designed and implemented 15 metamorphic relations for the billing system, deriving follow-up test cases to detect semantic bugs not caught by traditional oracle-based tests. Applied Stryker Mutator to measure mutation score and identify weaknesses in the test suite's fault-detection capability.",
+            "Built Selenium WebDriver test scripts for UI regression on the Study Planner frontend, covering critical user flows including login, plan generation, and unit management. All test pipelines are integrated into GitHub Actions with pass/fail reporting and artifact uploads."
+        ],
+        "keyOutcomes": [
+            "Achieved 91% mutation score on billing system after suite hardening with additional MRs.",
+            "15 metamorphic relations defined and validated across equivalence partitions.",
+            "Selenium suite covered 8 critical user flows with cross-browser test runs.",
+            "GitHub Actions CI pipeline reduced manual regression effort by over 70%."
+        ],
+        "systemSpecs": [
+            {
+                "label": "LANGUAGE",
+                "value": "C# / JavaScript"
+            },
+            {
+                "label": "FRAMEWORKS",
+                "value": "NUnit, Jest, Selenium"
+            },
+            {
+                "label": "MUTATION",
+                "value": "Stryker Mutator"
+            },
+            {
+                "label": "CI/CD",
+                "value": "GitHub Actions"
+            }
+        ],
+        "systemStatus": "COMPLETED",
+        "viewPort": "0x5D72"
+    }
+]
