@@ -1,9 +1,9 @@
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import styles from './Navbar.module.css';
 import resumePDF from '@/assets/SteveBeriak_Resume.pdf';
 
 function Navbar() {
-    const navigate = useNavigate();
+
 
     return (
         <>
