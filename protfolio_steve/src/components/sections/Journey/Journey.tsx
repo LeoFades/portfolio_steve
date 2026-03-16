@@ -20,18 +20,21 @@ export default function Journey() {
                                 <div className={styles.dot}></div>
 
                                 <h4 className={styles.role}>
-                                    Senior Design Engineer — Intel Corp.
+                                    Project Engineer Intern — Stinablis Sdn Bhd
                                 </h4>
 
                                 <span className={styles.date}>
-                                    2021 — Present
+                                    Jan 2026 - Feb 2026
                                 </span>
 
                                 <p className={styles.description}>
-                                    Leading the silicon validation team for next-generation server processors.
-                                    Implementing automated verification pipelines reducing time-to-market by
-                                    14%. Specializing in power-aware RTL synthesis and multi-corner timing
-                                    closure.
+                                    Led end-to-end reverse engineering workflows from 3D scan to functional prototype.
+                                    Restored availability of a discontinued 1997 Mercedes-Benz W202 brake light housing, delivering functional
+                                    replacements for 5+ vehicles.
+                                    Improved durability by replacing the housing’s brittle clip mechanism with screws mechanism.
+                                    Integrated modern LED modules while preserving OEM mounting interfaces.
+                                    Produced commemorative mementos for prominent startup programs, including Sarawak SaaS Accelerator and DIVA.
+
                                 </p>
                             </div>
 
@@ -39,17 +42,58 @@ export default function Journey() {
                                 <div className={styles.dot}></div>
 
                                 <h4 className={styles.role}>
-                                    Silicon Validation Lead — AMD
+                                    Mechanical & Electrical Project Engineer — Monash Automation
                                 </h4>
 
                                 <span className={styles.date}>
-                                    2017 — 2019
+                                    Apr 2025 - Present
                                 </span>
 
                                 <p className={styles.description}>
-                                    Execution of comprehensive test plans for mobile GPU architectures.
-                                    Managed cross-functional teams across three timezones to ensure
-                                    zero-defect shipment for flagship products.
+                                    Implemented AI integration and mechanical reskinning initiatives for a
+                                    Unitree Go1, enabling voice-command interaction.
+                                    Developed real-time voice command interface by integrating ChatGPT API with Raspberry Pi 4.
+                                    Contributed to mechanical redesign and external reskinning of the robot dog.
+
+                                </p>
+                            </div>
+
+                            <div className={styles.item}>
+                                <div className={styles.dot}></div>
+
+                                <h4 className={styles.role}>
+                                    Treasurer & Electrical Technician — Shell Eco Marathon Team Monash
+                                </h4>
+
+                                <span className={styles.date}>
+                                    Feb 2024 - Jun 2025
+                                </span>
+
+                                <p className={styles.description}>
+                                    Managed SEM Team Monash’s RM70,000+ budget, ensuring accurate financial
+                                    tracking for international competition (Lombok, Indonesia).
+                                    Oversaw finance transactions and expense approvals for team operations, coordinating with Monash Finance.
+                                    Applied PID control system for vacuum former, maintaining ±2°C temperature stability and producing competition
+                                    qualified windshields.
+
+                                </p>
+                            </div>
+
+                            <div className={styles.item}>
+                                <div className={styles.dot}></div>
+
+                                <h4 className={styles.role}>
+                                    MyVaccination Frontline Volunteer — Ministry of Youth and Sports of Malaysia
+                                </h4>
+
+                                <span className={styles.date}>
+                                    Feb 2021 - Jul 2021
+                                </span>
+
+                                <p className={styles.description}>
+                                    Assisted doctors & nurses in vaccination operations during the national
+                                    COVID-19 rollout, helping 5,000+ patients daily.
+
                                 </p>
                             </div>
                         </div>
@@ -67,20 +111,19 @@ export default function Journey() {
                                 <div className={styles.dot}></div>
 
                                 <h4 className={styles.role}>
-                                    M.S. Electrical Engineering — MIT
+                                    Bachelor of Engineering — Monash University
                                 </h4>
 
                                 <span className={styles.date}>
-                                    2019 — 2021
+                                    Feb 2023 - Present
                                 </span>
 
                                 <div className={styles.badge}>
-                                    GPA 4.0/4.0
+                                    GPA 3.83/4.0
                                 </div>
 
                                 <p className={styles.description}>
-                                    Research focused on hardware-accelerated neural networks.
-                                    Thesis: "Stochastic Computing for Energy-Efficient Edge Inference."
+                                    Major in Robotic and Mechatronics Engineering. Minor in Artificial Intellegent in Engineering.
                                 </p>
                             </div>
 
@@ -88,16 +131,32 @@ export default function Journey() {
                                 <div className={styles.dot}></div>
 
                                 <h4 className={styles.role}>
-                                    B.S. Computer Engineering — Stanford
+                                    Monash University Foundation Year — Monash University
                                 </h4>
 
                                 <span className={styles.date}>
-                                    2013 — 2017
+                                    idk bro tell me pls
                                 </span>
 
                                 <p className={styles.description}>
-                                    Core foundations in computer architecture, digital system design,
-                                    and semiconductor physics.
+                                    Completed course with a High Distinction score of 97.29 out of 100.
+                                </p>
+                            </div>
+
+                            <div className={styles.item}>
+                                <div className={styles.dot}></div>
+
+                                <h4 className={styles.role}>
+                                    Sijil Pelajaran Malaysia
+                                </h4>
+
+                                <span className={styles.date}>
+                                    Jan 2016 - Apr 2021
+                                </span>
+
+                                <p className={styles.description}>
+                                    Gruaduated high school and completed the Malaysian Certificate of Education with
+                                    10 As from the STEM stream.
                                 </p>
                             </div>
                         </div>

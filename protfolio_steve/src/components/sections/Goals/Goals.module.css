@@ -52,7 +52,7 @@
 
 .title {
     font-size: 1.075rem;
-    font-weight: 700;
+    font-weight: 600;
     text-transform: uppercase;
     line-height: 0.9;
     letter-spacing: -0.02em;
@@ -63,7 +63,7 @@
 
 @media (min-width: 768px) {
     .title {
-        font-size: 3rem;
+        font-size: 2.7rem;
     }
 }
 
@@ -77,7 +77,7 @@
     .divider {
         display: block;
         width: 1px;
-        height: 8rem;
+        height: 11rem;
         background-color: rgba(128, 128, 128, 0.2);
     }
 }

@@ -1,4 +1,5 @@
 import styles from './Testimonials.module.css';
+import { Star } from 'lucide-react';
 
 export default function Testimonials() {
     return (
@@ -26,11 +27,11 @@ export default function Testimonials() {
                         </div>
 
                         <div className={styles.stars}>
-                            <span className="material-symbols-outlined">star</span>
-                            <span className="material-symbols-outlined">star</span>
-                            <span className="material-symbols-outlined">star</span>
-                            <span className="material-symbols-outlined">star</span>
-                            <span className="material-symbols-outlined">star</span>
+                            <Star size={16} fill="currentColor" color="currentColor" />
+                            <Star size={16} fill="currentColor" color="currentColor" />
+                            <Star size={16} fill="currentColor" color="currentColor" />
+                            <Star size={16} fill="currentColor" color="currentColor" />
+                            <Star size={16} fill="currentColor" color="currentColor" />
                         </div>
 
                         <p className={styles.text}>
@@ -68,11 +69,11 @@ export default function Testimonials() {
                         </div>
 
                         <div className={styles.stars}>
-                            <span className="material-symbols-outlined">star</span>
-                            <span className="material-symbols-outlined">star</span>
-                            <span className="material-symbols-outlined">star</span>
-                            <span className="material-symbols-outlined">star</span>
-                            <span className="material-symbols-outlined">star</span>
+                            <Star size={16} fill="currentColor" color="currentColor" />
+                            <Star size={16} fill="currentColor" color="currentColor" />
+                            <Star size={16} fill="currentColor" color="currentColor" />
+                            <Star size={16} fill="currentColor" color="currentColor" />
+                            <Star size={16} fill="currentColor" color="currentColor" />
                         </div>
 
                         <p className={styles.text}>

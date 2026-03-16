@@ -7,9 +7,9 @@ function Goals() {
                 <div className={styles.wrapper}>
 
                     <div className={styles.left}>
-                        <h2 className={styles.subheading}>Current Objective</h2>
+                        <h2 className={styles.subheading}>About me</h2>
                         <h3 className={styles.title}>
-                            "Breakthrough into the semiconductor industry"
+                            “Give me a problem, and I’ll build my way to the answer.”
                         </h3>
                     </div>
 
@@ -17,8 +17,9 @@ function Goals() {
 
                     <div className={styles.right}>
                         <p className={styles.description}>
-                            Description - Steve likes to eat ice cream thanks for buying me
-                            icecream all the time bro, I like the magnum
+                            I build intelligent systems where hardware and software meet, working across robotics,
+                            embedded systems, AI, and mechanical design to turn ideas into functional prototypes.
+                            Curious and adaptable, I enjoy solving complex problems and collaborating in diverse teams.
                         </p>
                     </div>
 
