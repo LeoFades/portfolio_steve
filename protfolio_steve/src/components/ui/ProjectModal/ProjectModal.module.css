@@ -1,0 +1,422 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@400;500&family=Syne:wght@400;500;600;700&display=swap');
+
+/* ── Overlay ── */
+.modalOverlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 24px;
+    animation: overlayIn 0.2s ease;
+}
+
+@keyframes overlayIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* ── Container ── */
+.modalContainer {
+    background: #0f0f0f;
+    border: 1px solid #252525;
+    border-radius: 6px;
+    width: 100%;
+    max-width: 860px;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    animation: modalIn 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.04), 0 40px 80px rgba(0, 0, 0, 0.6);
+}
+
+@keyframes modalIn {
+    from {
+        opacity: 0;
+        transform: translateY(16px) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* ── Header ── */
+.modalHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 18px;
+    border-bottom: 1px solid #1e1e1e;
+    background: #0d0d0d;
+    flex-shrink: 0;
+}
+
+.modalHeaderLeft {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.modalHeaderIcon {
+    color: #555;
+    display: flex;
+    align-items: center;
+}
+
+.modalProjectName {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    color: #d0d0d0;
+    margin: 0 0 2px;
+    text-transform: uppercase;
+}
+
+.modalArchiveRef {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    color: #484848;
+    letter-spacing: 0.05em;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.modalCloseBtn {
+    width: 30px;
+    height: 30px;
+    border-radius: 4px;
+    border: 1px solid #2a2a2a;
+    background: #181818;
+    color: #888;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    flex-shrink: 0;
+}
+
+.modalCloseBtn:hover {
+    background: #252525;
+    color: #fff;
+    border-color: #3a3a3a;
+}
+
+/* ── Body ── */
+.modalBody {
+    overflow-y: auto;
+    flex: 1;
+    scrollbar-width: thin;
+    scrollbar-color: #2a2a2a transparent;
+}
+
+.modalBody::-webkit-scrollbar {
+    width: 4px;
+}
+
+.modalBody::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.modalBody::-webkit-scrollbar-thumb {
+    background: #2a2a2a;
+    border-radius: 2px;
+}
+
+/* ── Hero ── */
+.modalHero {
+    position: relative;
+    height: 220px;
+    overflow: hidden;
+}
+
+.modalHeroImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.45) saturate(0.6);
+}
+
+.modalHeroOverlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 24px 28px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.75) 0%, transparent 60%);
+}
+
+.modalHeroTitle {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(36px, 5vw, 52px);
+    letter-spacing: 0.04em;
+    color: #fff;
+    margin: 0 0 4px;
+    line-height: 1;
+}
+
+.modalHeroSubtitle {
+    font-family: 'Syne', sans-serif;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.65);
+    margin: 0;
+    letter-spacing: 0.01em;
+}
+
+/* ── Content grid ── */
+.modalContentGrid {
+    display: grid;
+    grid-template-columns: 1fr 240px;
+    gap: 0;
+    padding: 0;
+}
+
+.modalLeft {
+    padding: 24px 28px;
+    border-right: 1px solid #1a1a1a;
+}
+
+.modalRight {
+    padding: 20px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* ── Sections ── */
+.modalSection {
+    margin-bottom: 28px;
+}
+
+.modalSection:last-child {
+    margin-bottom: 0;
+}
+
+.modalSectionHeading {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    color: #888;
+    text-transform: uppercase;
+    margin: 0 0 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.modalSectionIcon {
+    color: #555;
+    display: flex;
+    align-items: center;
+}
+
+.modalBodyText {
+    font-family: 'Syne', sans-serif;
+    font-size: 13.5px;
+    line-height: 1.7;
+    color: #999;
+    margin: 0 0 14px;
+}
+
+.modalBodyText:last-child {
+    margin-bottom: 0;
+}
+
+/* ── Outcomes ── */
+.modalOutcomesList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.modalOutcomeItem {
+    font-family: 'Syne', sans-serif;
+    font-size: 13px;
+    color: #999;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    line-height: 1.5;
+}
+
+.modalOutcomeCheck {
+    color: #4a9c6e;
+    flex-shrink: 0;
+    margin-top: 1px;
+    display: flex;
+    align-items: center;
+}
+
+/* ── Right cards ── */
+.modalCard {
+    background: #111;
+    border: 1px solid #1e1e1e;
+    border-radius: 5px;
+    padding: 14px;
+}
+
+.modalCardHeading {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    color: #555;
+    text-transform: uppercase;
+    margin: 0 0 12px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* ── Tags ── */
+.modalTags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.modalTag {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.04em;
+    padding: 4px 8px;
+    border: 1px solid #2a2a2a;
+    border-radius: 3px;
+    color: #888;
+    background: #0d0d0d;
+    white-space: nowrap;
+}
+
+/* ── Specs ── */
+.modalSpecs {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.modalSpecRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 8px;
+}
+
+.modalSpecLabel {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.08em;
+    color: #454545;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.modalSpecValue {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    font-weight: 500;
+    color: #c0c0c0;
+    text-align: right;
+}
+
+/* ── Footer ── */
+.modalFooter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 18px;
+    border-top: 1px solid #1a1a1a;
+    background: #0a0a0a;
+    flex-shrink: 0;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.modalFooterActions {
+    display: flex;
+    gap: 10px;
+}
+
+.modalFooterBtn {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #777;
+    background: transparent;
+    border: 1px solid #252525;
+    border-radius: 3px;
+    padding: 6px 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.15s ease;
+}
+
+.modalFooterBtn:hover {
+    color: #ddd;
+    border-color: #404040;
+    background: #181818;
+}
+
+.modalFooterStatus {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.07em;
+    color: #3a3a3a;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.modalFooterDivider {
+    color: #2a2a2a;
+}
+
+.modalStatusValue {
+    color: #555;
+}
+
+/* ── Responsive ── */
+@media (max-width: 680px) {
+    .modalOverlay {
+        padding: 12px;
+    }
+
+    .modalContentGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .modalLeft {
+        border-right: none;
+        border-bottom: 1px solid #1a1a1a;
+    }
+
+    .modalHero {
+        height: 160px;
+    }
+
+    .modalFooter {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
