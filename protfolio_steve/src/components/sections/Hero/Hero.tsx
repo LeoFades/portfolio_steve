@@ -36,10 +36,14 @@ function Hero() {
                     </div> */}
 
                     <div className={styles.buttonWrapper}>
-                        <button className={styles.heroButton}>
+                        <button className={styles.heroButton} onClick={() => {
+                            document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
+                        }}>
                             Explore Portfolio
                         </button>
-                        <button className={styles.heroButtonSecondary}>
+                        <button className={styles.heroButtonSecondary} onClick={() => {
+                            document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                        }}>
                             Contact Me
                         </button>
                     </div>
