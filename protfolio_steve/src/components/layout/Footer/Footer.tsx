@@ -14,29 +14,34 @@ function Footer() {
                         </svg>
                     </div>
 
-                    <span className={styles.brandText}>
-                        Engineer_Core_V1
-                    </span>
+
 
                 </div>
 
                 <div className={styles.copyright}>
-                    © 2024 Build_2301_Final. No rights reserved. Design for efficiency.
+                    © 2026 Steve_Beriak Copyrighted. Designed and developed by Leo_Fades.
                 </div>
 
                 <div className={styles.links}>
 
-                    <a href="#" className={styles.icon}>
-                        <span className="material-symbols-outlined">code</span>
-                    </a>
+                    <div className={styles.tooltipWrapper}>
+                        <span className={`material-symbols-outlined ${styles.icon}`}>info</span>
 
-                    <a href="#" className={styles.icon}>
-                        <span className="material-symbols-outlined">share</span>
-                    </a>
+                        <div className={styles.tooltip}>
+                            <p>Follow or reach out to {' '}
+                                <a
+                                    href="https://www.linkedin.com/in/leofades"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className={styles.tooltipLink}
+                                >
+                                    Leo Fades
+                                </a>
+                                {' '}for more exciting projects!
+                            </p>
 
-                    <a href="#" className={styles.icon}>
-                        <span className="material-symbols-outlined">settings</span>
-                    </a>
+                        </div>
+                    </div>
 
                 </div>
 

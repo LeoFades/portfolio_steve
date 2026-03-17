@@ -21,6 +21,13 @@
     color: var(--color-text);
 }
 
+@media (max-width: 680px) {
+    .logo {
+        font-size: 2rem;
+        letter-spacing: 10px;
+    }
+}
+
 .separator {
     display: flex;
     flex-direction: column;

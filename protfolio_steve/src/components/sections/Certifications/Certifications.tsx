@@ -18,7 +18,7 @@ export default function Certifications() {
                     </div>
 
                     <h6 className={styles.cardTitle}>
-                        CSWA Certified
+                        SolidWorks CSWA Certified
                     </h6>
 
                     <p className={styles.cardText}>
@@ -35,7 +35,7 @@ export default function Certifications() {
                     </div>
 
                     <h6 className={styles.cardTitle}>
-                        Dean's List
+                        Monash Dean's List
                     </h6>
 
                     <p className={styles.cardText}>
@@ -44,7 +44,7 @@ export default function Certifications() {
                 </div>
 
 
-                <div className={styles.card}>
+                {/* <div className={styles.card}>
                     <div className={styles.icon}>
                         <span className="material-symbols-outlined">
                             verified_user
@@ -58,10 +58,10 @@ export default function Certifications() {
                     <p className={styles.cardText}>
                         AI for Robotics
                     </p>
-                </div>
+                </div> */}
 
 
-                <div className={styles.card}>
+                {/* <div className={styles.card}>
                     <div className={styles.icon}>
                         <span className="material-symbols-outlined">
                             leaderboard
@@ -75,7 +75,7 @@ export default function Certifications() {
                     <p className={styles.cardText}>
                         Regional Engineering Cup
                     </p>
-                </div>
+                </div> */}
 
             </div>
         </section>

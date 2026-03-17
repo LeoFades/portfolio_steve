@@ -62,7 +62,8 @@
 }
 
 .subTitleWrapper {
-    height: 2rem;
+    margin-top: 2rem;
+    height: 1rem;
     display: flex;
     align-items: center;
 }

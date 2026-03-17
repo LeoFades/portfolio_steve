@@ -45,8 +45,8 @@
 
 .line {
     position: absolute;
-    left: 0;
-    top: 0;
+    left: 3px;
+    top: 4px;
     bottom: 0;
     width: 1px;
     background: rgba(120, 120, 120, 0.2);
