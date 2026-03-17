@@ -7,8 +7,8 @@ function Contact() {
                 <h2 className={styles.title}>Let’s Interface</h2>
 
                 <p className={styles.subtitle}>
-                    Open for architectural consulting, system design partnerships,
-                    and technical leadership opportunities.
+                    Feel free to reach out if you'd like to connect, collaborate,
+                    or discuss opportunities related to mechatronics, control systems, or embedded systems.
                 </p>
 
                 <div className={styles.emailWrapper}>

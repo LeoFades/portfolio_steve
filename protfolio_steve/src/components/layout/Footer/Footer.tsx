@@ -21,22 +21,29 @@ function Footer() {
                 </div>
 
                 <div className={styles.copyright}>
-                    © 2024 Build_2301_Final. No rights reserved. Design for efficiency.
+                    © 2026 Steve_Beriak. Designed and developed by Leo_Fades.
                 </div>
 
                 <div className={styles.links}>
 
-                    <a href="#" className={styles.icon}>
-                        <span className="material-symbols-outlined">code</span>
-                    </a>
+                    <div className={styles.tooltipWrapper}>
+                        <span className={`material-symbols-outlined ${styles.icon}`}>info</span>
 
-                    <a href="#" className={styles.icon}>
-                        <span className="material-symbols-outlined">share</span>
-                    </a>
+                        <div className={styles.tooltip}>
+                            <p>This portfolio was designed and developed by {' '}
+                                <a
+                                    href="https://www.linkedin.com/in/leofades"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className={styles.tooltipLink}
+                                >
+                                    Leo Fades
+                                </a>
+                                .
+                            </p>
 
-                    <a href="#" className={styles.icon}>
-                        <span className="material-symbols-outlined">settings</span>
-                    </a>
+                        </div>
+                    </div>
 
                 </div>
 

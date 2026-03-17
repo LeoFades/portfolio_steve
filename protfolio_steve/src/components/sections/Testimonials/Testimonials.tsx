@@ -35,24 +35,27 @@ export default function Testimonials() {
                         </div>
 
                         <p className={styles.text}>
-                            "One of the most technically sound engineers I've had the pleasure
-                            of working with. His ability to bridge the gap between abstract
-                            architectural concepts and physical silicon reality is unmatched."
+                            "During his time with us, Steve excelled in mechanical design tasks, showing an
+                            impressive command of SolidWorks. He was able to translate concepts into detailed
+                            parts efficiently and with a high attention to detail. What set Steve apart, however,
+                            was his teamwork; he was always willing to support colleagues and accepted feeback
+                            constructively. He is a talented designer with a positive work ethic, and he would
+                            be an asset to any engineering team."
                         </p>
 
                         <div className={styles.author}>
 
                             <div className={styles.avatar}>
-                                JD
+                                DR
                             </div>
 
                             <div>
                                 <h5 className={styles.name}>
-                                    John Doe
+                                    Dylan Rudy
                                 </h5>
 
                                 <span className={styles.role}>
-                                    Director of Engineering, Intel
+                                    Chief Technology Officer, Stinablis Sdn Bhd
                                 </span>
                             </div>
 
@@ -62,7 +65,7 @@ export default function Testimonials() {
 
 
                     {/* Testimonial 2 */}
-                    <div className={styles.card}>
+                    {/* <div className={styles.card}>
 
                         <div className={styles.quoteIcon}>
                             <span className="material-symbols-outlined">format_quote</span>
@@ -99,7 +102,7 @@ export default function Testimonials() {
                             </div>
 
                         </div>
-                    </div>
+                    </div> */}
 
                 </div>
 

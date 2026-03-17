@@ -135,7 +135,7 @@ export default function Journey() {
                                 </h4>
 
                                 <span className={styles.date}>
-                                    idk bro tell me pls
+                                    Jul 2021 - Jun 2022
                                 </span>
 
                                 <p className={styles.description}>
