@@ -31,10 +31,10 @@ import jungle from '@/assets/Personal_Interests/Jungle_Trekking/jungle.jpeg'
 import jungle1 from '@/assets/Personal_Interests/Jungle_Trekking/jungle1.png'
 import jungle2 from '@/assets/Personal_Interests/Jungle_Trekking/jungle2.png'
 
-//rock climbing
-import rock from '@/assets/Personal_Interests/Rock_Climbing/rock.png'
-import rock1 from '@/assets/Personal_Interests/Rock_Climbing/rock1.png'
-import rock2 from '@/assets/Personal_Interests/Rock_Climbing/rock2.png'
+// //rock climbing
+// import rock from '@/assets/Personal_Interests/Rock_Climbing/rock.png'
+// import rock1 from '@/assets/Personal_Interests/Rock_Climbing/rock1.png'
+// import rock2 from '@/assets/Personal_Interests/Rock_Climbing/rock2.png'
 
 // ─────────────────────────────────────────────
 // ADD / EDIT YOUR INTERESTS HERE
