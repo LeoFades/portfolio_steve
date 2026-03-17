@@ -30,7 +30,7 @@ function Navbar() {
                     <nav className={styles.nav}>
                         <a href="/#journey">JOURNEY</a>
                         <Link to="/projects">PROJECTS</Link>
-                        <a href="/#goals">GOALS</a>
+                        <a href="/#goals">ABOUT</a>
                         <a href="/#contact">CONTACT</a>
                     </nav>
 

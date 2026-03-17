@@ -16,7 +16,7 @@ function Hero() {
 
                     <div className={styles.subTitleWrapper}>
                         <p className={styles.subTitle}>
-                            Artificial Intelligence | Automation | Embedded & Electrical Systems | Mechanical CAD
+                            AI | Automation | Embedded & Electrical Systems | Mechanical CAD
                         </p>
                     </div>
 

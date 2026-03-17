@@ -29,12 +29,19 @@ export default function Journey() {
 
                                 <p className={styles.description}>
                                     Led end-to-end reverse engineering workflows from 3D scan to functional prototype.
+                                </p>
+                                <p className={styles.description}>
                                     Restored availability of a discontinued 1997 Mercedes-Benz W202 brake light housing, delivering functional
                                     replacements for 5+ vehicles.
+                                </p>
+                                <p className={styles.description}>
                                     Improved durability by replacing the housing’s brittle clip mechanism with screws mechanism.
+                                </p>
+                                <p className={styles.description}>
                                     Integrated modern LED modules while preserving OEM mounting interfaces.
+                                </p>
+                                <p className={styles.description}>
                                     Produced commemorative mementos for prominent startup programs, including Sarawak SaaS Accelerator and DIVA.
-
                                 </p>
                             </div>
 
@@ -52,9 +59,15 @@ export default function Journey() {
                                 <p className={styles.description}>
                                     Implemented AI integration and mechanical reskinning initiatives for a
                                     Unitree Go1, enabling voice-command interaction.
-                                    Developed real-time voice command interface by integrating ChatGPT API with Raspberry Pi 4.
-                                    Contributed to mechanical redesign and external reskinning of the robot dog.
 
+
+
+                                </p>
+                                <p className={styles.description}>
+                                    Developed real-time voice command interface by integrating ChatGPT API with Raspberry Pi 4.
+                                </p>
+                                <p className={styles.description}>
+                                    Contributed to mechanical redesign and external reskinning of the robot dog.
                                 </p>
                             </div>
 
@@ -72,11 +85,18 @@ export default function Journey() {
                                 <p className={styles.description}>
                                     Managed SEM Team Monash’s RM70,000+ budget, ensuring accurate financial
                                     tracking for international competition (Lombok, Indonesia).
-                                    Oversaw finance transactions and expense approvals for team operations, coordinating with Monash Finance.
-                                    Applied PID control system for vacuum former, maintaining ±2°C temperature stability and producing competition
-                                    qualified windshields.
+
 
                                 </p>
+                                <p className={styles.description}>
+                                    Oversaw finance transactions and expense approvals for team operations, coordinating with Monash Finance.
+
+                                </p>
+                                <p className={styles.description}>
+                                    Applied PID control system for vacuum former, maintaining ±2°C temperature stability and producing competition
+                                    qualified windshields.
+                                </p>
+
                             </div>
 
                             <div className={styles.item}>
@@ -119,7 +139,7 @@ export default function Journey() {
                                 </span>
 
                                 <div className={styles.badge}>
-                                    GPA 3.83/4.0
+                                    GPA 3.83/4.0 | WAM 85.64/100
                                 </div>
 
                                 <p className={styles.description}>

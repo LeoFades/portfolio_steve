@@ -30,7 +30,7 @@ function Footer() {
                         <span className={`material-symbols-outlined ${styles.icon}`}>info</span>
 
                         <div className={styles.tooltip}>
-                            <p>This portfolio was designed and developed by {' '}
+                            <p>Follow or reach out to {' '}
                                 <a
                                     href="https://www.linkedin.com/in/leofades"
                                     target="_blank"
@@ -39,7 +39,7 @@ function Footer() {
                                 >
                                     Leo Fades
                                 </a>
-                                .
+                                {' '}for more exciting projects!
                             </p>
 
                         </div>

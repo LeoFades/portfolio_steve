@@ -18,7 +18,7 @@ export default function Certifications() {
                     </div>
 
                     <h6 className={styles.cardTitle}>
-                        CSWA Certified
+                        SolidWorks CSWA Certified
                     </h6>
 
                     <p className={styles.cardText}>
@@ -35,7 +35,7 @@ export default function Certifications() {
                     </div>
 
                     <h6 className={styles.cardTitle}>
-                        Dean's List
+                        Monash Dean's List
                     </h6>
 
                     <p className={styles.cardText}>
