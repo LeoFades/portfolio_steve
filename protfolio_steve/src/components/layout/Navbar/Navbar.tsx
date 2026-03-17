@@ -28,7 +28,7 @@ function Navbar() {
 
                     {/* Desktop nav */}
                     <nav className={styles.nav}>
-                        <a href="/#journey">JOURNEY</a>
+                        <a href="https://steveberiak.vercel.app/">HOME</a>
                         <Link to="/projects">PROJECTS</Link>
                         <a href="/#goals">ABOUT</a>
                         <a href="/#contact">CONTACT</a>
