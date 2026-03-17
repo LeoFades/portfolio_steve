@@ -19,7 +19,7 @@ function Footer() {
                 </div>
 
                 <div className={styles.copyright}>
-                    © 2026 Steve_Beriak. Designed and developed by Leo_Fades.
+                    © 2026 Steve_Beriak Copyrighted. Designed and developed by Leo_Fades.
                 </div>
 
                 <div className={styles.links}>
