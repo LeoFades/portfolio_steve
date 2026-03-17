@@ -14,9 +14,7 @@ function Footer() {
                         </svg>
                     </div>
 
-                    <span className={styles.brandText}>
-                        Engineer_Core_V1
-                    </span>
+
 
                 </div>
 
