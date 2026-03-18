@@ -1,6 +1,6 @@
 # Steve Beriak — Professional Portfolio
 
-**Designed & Developed by Leo Fades** · [LinkedIn](https://www.linkedin.com/in/YOUR_LINKEDIN_HERE)
+**Designed & Developed by Leo Fades** · [LinkedIn](https://www.linkedin.com/in/leofades)
 
 ---
 
