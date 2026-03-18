@@ -89,20 +89,19 @@ src/data/projects.json
 ### Adding Images to a Project
 
 Put your images in:
-
+ 
 ```
-src/assets/Projects/[ProjectTitle]
+public/Projects/[ProjectTitle]
 ```
-
+ 
 Then reference them in `projects.json` like this:
-
+ 
 ```json
 "images": [
-    "src/assets/Projects/MyProject/myproject1.jpg",
-    "src/assets/Projects/MyProject/myproject2.jpg"
+    "/Projects/MyProject/myproject1.jpg",
+    "/Projects/MyProject/myproject2.jpg"
 ]
 ```
-
 
 ### Removing a Project
 

@@ -8,11 +8,11 @@
         "subtitle": "Portable Cooling Neck Fan with Reusable Gel-Cooling Technology",
         "category": "Hardware",
         "images": [
-            "/src/assets/Projects/BreezeCirc/BreezeCirc.png",
-            "/src/assets/Projects/BreezeCirc/BreezeCirc1.png",
-            "/src/assets/Projects/BreezeCirc/BreezeCirc2.png",
-            "/src/assets/Projects/BreezeCirc/BreezeCirc3.png",
-            "/src/assets/Projects/BreezeCirc/BreezeCirc4.png"
+            "/Projects/BreezeCirc/BreezeCirc.png",
+            "/Projects/BreezeCirc/BreezeCirc1.png",
+            "/Projects/BreezeCirc/BreezeCirc2.png",
+            "/Projects/BreezeCirc/BreezeCirc3.png",
+            "/Projects/BreezeCirc/BreezeCirc4.png"
         ],
         "tags": [
             "SolidWorks",
@@ -66,10 +66,10 @@
         "subtitle": "Automated Parcel Size Sorting System for Efficient Logistics Handling",
         "category": "Hardware",
         "images": [
-            "/src/assets/Projects/Sortify/Sortify.png",
-            "/src/assets/Projects/Sortify/Sortify1.png",
-            "/src/assets/Projects/Sortify/Sortify2.png",
-            "/src/assets/Projects/Sortify/Sortify3.png"
+            "/Projects/Sortify/Sortify.png",
+            "/Projects/Sortify/Sortify1.png",
+            "/Projects/Sortify/Sortify2.png",
+            "/Projects/Sortify/Sortify3.png"
         ],
         "tags": [
             "PLC",
@@ -127,10 +127,10 @@
         "subtitle": "Custom Vacuum Forming Machine for Lightweight Aerodynamic Car Components",
         "category": "Hardware",
         "images": [
-            "/src/assets/Projects/Formify/Formify.png",
-            "/src/assets/Projects/Formify/Formify1.png",
-            "/src/assets/Projects/Formify/Formify2.png",
-            "/src/assets/Projects/Formify/Formify3.png"
+            "/Projects/Formify/Formify.png",
+            "/Projects/Formify/Formify1.png",
+            "/Projects/Formify/Formify2.png",
+            "/Projects/Formify/Formify3.png"
         ],
         "tags": [
             "PID Control",
@@ -186,9 +186,9 @@
         "subtitle": "Real-Time Hardware-Accelerated Image Processing on DE10-Lite FPGA with ESP32-CAM",
         "category": "Hardware",
         "images": [
-            "/src/assets/Projects/FPGA/fpga.png",
-            "/src/assets/Projects/FPGA/fpga1.png",
-            "/src/assets/Projects/FPGA/fpga2.png"
+            "/Projects/FPGA/fpga.png",
+            "/Projects/FPGA/fpga1.png",
+            "/Projects/FPGA/fpga2.png"
         ],
         "tags": [
             "FPGA",
@@ -247,9 +247,9 @@
         "subtitle": "Fully Autonomous Retail Assistant Robot with SLAM Mapping and YOLO Detection",
         "category": "Research",
         "images": [
-            "/src/assets/Projects/PenguinPi/Penguin.png",
-            "/src/assets/Projects/PenguinPi/Penguin1.png",
-            "/src/assets/Projects/PenguinPi/Penguin2.png"
+            "/Projects/PenguinPi/Penguin.png",
+            "/Projects/PenguinPi/Penguin1.png",
+            "/Projects/PenguinPi/Penguin2.png"
         ],
         "tags": [
             "SLAM",
@@ -306,8 +306,8 @@
         "subtitle": "Unitree Go1 Robot Dog with Friendly Design Features and Voice AI Control",
         "category": "Hardware",
         "images": [
-            "/src/assets/Projects/Robot_Dog_Reskinning/robot.png",
-            "/src/assets/Projects/Robot_Dog_Reskinning/robot1.png"
+            "/Projects/Robot_Dog_Reskinning/robot.png",
+            "/Projects/Robot_Dog_Reskinning/robot1.png"
         ],
         "tags": [
             "CAD",
