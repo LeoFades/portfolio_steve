@@ -139,7 +139,7 @@
 /* ── Hero ── */
 .modalHero {
     position: relative;
-    height: 220px;
+    height: 360px;
     overflow: hidden;
 }
 
@@ -302,7 +302,7 @@
     border-radius: 3px;
     color: #888;
     background: #0d0d0d;
-    white-space: nowrap;
+    /* white-space: nowrap; */
 }
 
 /* ── Specs ── */
@@ -419,4 +419,161 @@
         flex-direction: column;
         align-items: flex-start;
     }
+}
+
+/* ── Hero image fade ── */
+@keyframes heroFadeIn {
+    from {
+        opacity: 0;
+        transform: scale(1.02);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.modalHeroImg {
+    animation: heroFadeIn 0.35s ease;
+}
+
+/* ── Hero carousel controls ── */
+.heroControls {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 8px 12px;
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(4px);
+    z-index: 2;
+}
+
+.heroArrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    flex-shrink: 0;
+}
+
+.heroArrow:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.heroDots {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+.heroDot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.35);
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: all 0.2s ease;
+}
+
+.heroDotActive {
+    background: white;
+    width: 16px;
+    border-radius: 3px;
+}
+
+
+/* ── Side arrows over hero ── */
+.heroArrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(4px);
+    color: white;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    z-index: 2;
+}
+
+.heroArrow:hover {
+    background: rgba(0, 0, 0, 0.75);
+}
+
+.heroArrowLeft {
+    left: 12px;
+}
+
+.heroArrowRight {
+    right: 12px;
+}
+
+/* ── Thumbnail strip ── */
+.thumbStrip {
+    display: flex;
+    gap: 6px;
+    padding: 8px 12px;
+    background: #0a0a0a;
+    border-bottom: 1px solid #1a1a1a;
+    overflow-x: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #2a2a2a transparent;
+}
+
+.thumbStrip::-webkit-scrollbar {
+    height: 3px;
+}
+
+.thumbStrip::-webkit-scrollbar-thumb {
+    background: #2a2a2a;
+    border-radius: 2px;
+}
+
+.thumb {
+    flex-shrink: 0;
+    width: 64px;
+    height: 48px;
+    border-radius: 4px;
+    overflow: hidden;
+    border: 2px solid transparent;
+    padding: 0;
+    cursor: pointer;
+    transition: border-color 0.15s ease, opacity 0.15s ease;
+    opacity: 0.5;
+}
+
+.thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.thumb:hover {
+    opacity: 0.8;
+}
+
+.thumbActive {
+    border-color: #f0f0f0;
+    opacity: 1;
 }

@@ -237,7 +237,7 @@ function ProjectCard({ project, onClick }: ProjectCardProps) {
             onKeyDown={(e: React.KeyboardEvent<HTMLElement>) => { if (e.key === 'Enter') onClick(); }}
         >
             <div className={styles.cardImageWrap}>
-                <img src={project.image} alt={project.title} className={styles.cardImage} />
+                <img src={project.images[0]} alt={project.title} className={styles.cardImage} />
             </div>
             <div className={styles.cardBody}>
                 <div className={styles.cardTitleRow}>

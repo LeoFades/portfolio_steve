@@ -28,7 +28,7 @@ function Navbar() {
 
                     {/* Desktop nav */}
                     <nav className={styles.nav}>
-                        <a href="https://steveberiak.vercel.app/">HOME</a>
+                        <Link to="/">HOME</Link>
                         <Link to="/projects">PROJECTS</Link>
                         <a href="/#goals">ABOUT</a>
                         <a href="/#contact">CONTACT</a>
@@ -63,7 +63,7 @@ function Navbar() {
 
             {/* Mobile dropdown */}
             <div className={`${styles.mobileMenu} ${menuOpen ? styles.mobileMenuOpen : ''}`}>
-                <a href="/#journey" onClick={closeMenu}>JOURNEY</a>
+                <Link to="/" onClick={closeMenu}>HOME</Link>
                 <Link to="/projects" onClick={closeMenu}>PROJECTS</Link>
                 <a href="/#goals" onClick={closeMenu}>GOALS</a>
                 <a href="/#contact" onClick={closeMenu}>CONTACT</a>
