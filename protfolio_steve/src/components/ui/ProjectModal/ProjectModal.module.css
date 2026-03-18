@@ -302,7 +302,7 @@
     border-radius: 3px;
     color: #888;
     background: #0d0d0d;
-    white-space: nowrap;
+    /* white-space: nowrap; */
 }
 
 /* ── Specs ── */

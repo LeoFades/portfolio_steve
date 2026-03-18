@@ -204,24 +204,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
 
                 {/* ── Footer ── */}
                 <div className={styles.modalFooter}>
-                    <div className={styles.modalFooterActions}>
-                        <button className={styles.modalFooterBtn}>
-                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                                <circle cx="11" cy="3" r="2" stroke="currentColor" strokeWidth="1.2" />
-                                <circle cx="11" cy="11" r="2" stroke="currentColor" strokeWidth="1.2" />
-                                <circle cx="3" cy="7" r="2" stroke="currentColor" strokeWidth="1.2" />
-                                <path d="M5 6.1L9.1 4M5 7.9L9.1 10" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" />
-                            </svg>
-                            SHARE_RESOURCE
-                        </button>
-                        <button className={styles.modalFooterBtn}>
-                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                                <path d="M7 1v8M4 6l3 3 3-3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                                <path d="M2 11h10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-                            </svg>
-                            GET_DOCS.PDF
-                        </button>
-                    </div>
+
                     <div className={styles.modalFooterStatus}>
                         <span>SYSTEM_STATUS:&nbsp;<span className={styles.modalStatusValue}>{project.systemStatus}</span></span>
                         <span className={styles.modalFooterDivider}>//</span>
