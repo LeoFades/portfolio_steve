@@ -29,7 +29,7 @@ export default function Projects() {
                             onClick={() => setSelectedProject(project)}
                         >
                             <img
-                                src={project.image}
+                                src={project.images[0]}
                                 className={styles.image}
                                 alt={project.title}
                             />

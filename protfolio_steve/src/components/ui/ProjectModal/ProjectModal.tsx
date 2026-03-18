@@ -1,5 +1,6 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 import type { Project } from '@/pages/Projects/Projects.types';
 import styles from './ProjectModal.module.css';
 
@@ -10,10 +11,11 @@ interface ProjectModalProps {
 
 export default function ProjectModal({ project, onClose }: ProjectModalProps) {
     const overlayRef = useRef<HTMLDivElement>(null);
+    const [currentImage, setCurrentImage] = useState(0);
 
     useEffect(() => {
         if (!project) return;
-
+        setCurrentImage(0);
         const handleKey = (e: KeyboardEvent) => { if (e.key === 'Escape') onClose(); };
         document.addEventListener('keydown', handleKey);
         document.body.style.overflow = 'hidden';
@@ -28,6 +30,11 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
     };
 
     if (!project) return null;
+
+    const images = project.images;
+    const hasMultiple = images.length > 1;
+    const prevImage = () => setCurrentImage((i) => (i - 1 + images.length) % images.length);
+    const nextImage = () => setCurrentImage((i) => (i + 1) % images.length);
 
     return createPortal(
         <div className={styles.modalOverlay} ref={overlayRef} onClick={handleOverlayClick}>
@@ -59,14 +66,53 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                 {/* ── Scrollable body ── */}
                 <div className={styles.modalBody}>
 
-                    {/* Hero */}
+                    {/* ── Hero ── */}
                     <div className={styles.modalHero}>
-                        <img src={project.image} alt={project.title} className={styles.modalHeroImg} />
+                        <img
+                            key={currentImage}
+                            src={images[currentImage]}
+                            alt={`${project.title} image ${currentImage + 1}`}
+                            className={styles.modalHeroImg}
+                        />
                         <div className={styles.modalHeroOverlay}>
                             <h1 className={styles.modalHeroTitle}>{project.title}</h1>
                             <p className={styles.modalHeroSubtitle}>{project.subtitle}</p>
                         </div>
+                        {hasMultiple && (
+                            <>
+                                <button
+                                    className={`${styles.heroArrow} ${styles.heroArrowLeft}`}
+                                    onClick={(e) => { e.stopPropagation(); prevImage(); }}
+                                    aria-label="Previous image"
+                                >
+                                    <ChevronLeft size={18} />
+                                </button>
+                                <button
+                                    className={`${styles.heroArrow} ${styles.heroArrowRight}`}
+                                    onClick={(e) => { e.stopPropagation(); nextImage(); }}
+                                    aria-label="Next image"
+                                >
+                                    <ChevronRight size={18} />
+                                </button>
+                            </>
+                        )}
                     </div>
+
+                    {/* ── Thumbnail strip ── */}
+                    {hasMultiple && (
+                        <div className={styles.thumbStrip}>
+                            {images.map((src, i) => (
+                                <button
+                                    key={i}
+                                    className={`${styles.thumb} ${i === currentImage ? styles.thumbActive : ''}`}
+                                    onClick={() => setCurrentImage(i)}
+                                    aria-label={`View image ${i + 1}`}
+                                >
+                                    <img src={src} alt={`Thumbnail ${i + 1}`} />
+                                </button>
+                            ))}
+                        </div>
+                    )}
 
                     {/* Content grid */}
                     <div className={styles.modalContentGrid}>

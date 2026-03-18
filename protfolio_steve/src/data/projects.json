@@ -1,348 +1,355 @@
 [
     {
         "id": 1,
-        "slug": "student-study-planner",
-        "name": "STUDENT STUDY PLANNER SYSTEM",
-        "archiveRef": "FYP-2025 // BEST GROUP AWARD",
-        "title": "STUDENT STUDY PLANNER",
-        "subtitle": "Full-Stack Academic Management Platform for Institutions",
-        "category": "Software",
-        "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&q=80",
-        "tags": [
-            "Next.js",
-            "React",
-            "Prisma",
-            "Supabase",
-            "PostgreSQL",
-            "MSAL"
-        ],
-        "coreTech": [
-            "Next.js",
-            "React",
-            "Prisma ORM",
-            "Supabase",
-            "PostgreSQL",
-            "Microsoft Entra ID",
-            "Vercel"
-        ],
-        "summary": "A full-stack web application built for Swinburne University's Head of Departments, enabling multi-tier role-based management of student academic plans, unit assignments, and course structures. The system supports five RBAC tiers with granular permissions, real-time audit logging, and a dynamic study planner generation engine.",
-        "description": [
-            "Architected and delivered a production-grade Next.js application with Prisma ORM and Supabase/PostgreSQL as the persistence layer. Authentication is handled via Microsoft Entra ID (MSAL) with httpOnly cookie-based JWT validation, ensuring compliance with institutional SSO requirements.",
-            "Led frontend theming (light/dark mode), Jest test suites, and end-to-end security hardening including CSP headers, Snyk static analysis, OWASP ZAP dynamic scanning, and TruffleHog secrets detection. Deployed on Vercel with CI/CD pipelines."
-        ],
-        "keyOutcomes": [
-            "Won Swinburne University's Best Group Project Award and adopted by the IT department.",
-            "Implemented five-tier RBAC with full audit trail across all privileged operations.",
-            "Achieved zero critical vulnerabilities post-ZAP scan and Snyk static analysis.",
-            "Reduced manual study plan generation time by an estimated 60% for coordinators."
-        ],
-        "systemSpecs": [
-            {
-                "label": "FRAMEWORK",
-                "value": "Next.js 14 (App Router)"
-            },
-            {
-                "label": "DATABASE",
-                "value": "PostgreSQL via Supabase"
-            },
-            {
-                "label": "AUTH",
-                "value": "Microsoft Entra ID (MSAL)"
-            },
-            {
-                "label": "DEPLOYMENT",
-                "value": "Vercel + GitHub Actions"
-            }
-        ],
-        "systemStatus": "DEPLOYED",
-        "viewPort": "0xA1F3"
-    },
-    {
-        "id": 2,
-        "slug": "iot-environmental-monitor",
-        "name": "IOT ENVIRONMENTAL MONITOR",
-        "archiveRef": "PROJ-IOT-2025 // ESP32 MESH",
-        "title": "IOT ENV MONITOR",
-        "subtitle": "Distributed Wireless Sensor Network for Environmental Intelligence",
+        "slug": "breezcirc-neck-fan",
+        "name": "BREEZCIRC — PORTABLE NECK FAN",
+        "archiveRef": "PROJ-001 // $5,000 DEVELOPMENT GRANT",
+        "title": "BREEZCIRC",
+        "subtitle": "Portable Cooling Neck Fan with Reusable Gel-Cooling Technology",
         "category": "Hardware",
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80",
+        "images": [
+            "/src/assets/Projects/BreezeCirc/BreezeCirc.png",
+            "/src/assets/Projects/BreezeCirc/BreezeCirc1.png",
+            "/src/assets/Projects/BreezeCirc/BreezeCirc2.png",
+            "/src/assets/Projects/BreezeCirc/BreezeCirc3.png",
+            "/src/assets/Projects/BreezeCirc/BreezeCirc4.png"
+        ],
         "tags": [
-            "ESP32",
-            "AWS IoT Core",
-            "MQTT",
-            "C++",
-            "FreeRTOS"
+            "SolidWorks",
+            "3D Printing",
+            "Product Design"
         ],
         "coreTech": [
-            "ESP32 / Xiao ESP32C3",
-            "AWS IoT Core",
-            "MQTT",
-            "ADXL345",
-            "DHT11/SHT31",
-            "FreeRTOS",
-            "OLED SSD1306"
+            "SolidWorks (3D CAD Modelling)",
+            "Prusa 3D Printing",
+            "Additive Manufacturing",
+            "Technical Drawing",
+            "Rapid Prototyping"
         ],
-        "summary": "A distributed IoT sensor network built on ESP32 microcontrollers for dual-purpose environmental monitoring: plant health tracking and illegal logging detection via vibration analysis. Sensor nodes communicate over MQTT to AWS IoT Core for cloud aggregation and alerting.",
+        "summary": "Lightweight neck fan integrating reusable gel-cooling technology to pre-cool incoming airflow, improving user comfort in extreme heat environments. Led a 6-member team to secure a $5,000 development grant.",
         "description": [
-            "Developed firmware in C++ targeting ESP32 and Xiao ESP32C3 boards, integrating the ADXL345 accelerometer for vibration-based anomaly detection, DHT11/SHT31 for temperature and humidity, and a GPS module for geolocation tagging of alert events.",
-            "Designed a low-power duty-cycle scheme to extend field battery life. Sensor data is serialized as JSON payloads over MQTT to AWS IoT Core, where rules engine triggers SNS alerts on threshold violations. OLED displays provide local node status."
+            "Conventional neck fans circulate ambient hot air, providing limited cooling in extreme heat. BreezeCirc addresses this by integrating reusable gel-cooling technology that pre-cools incoming airflow, improving user comfort and reducing heat-related health risks.",
+            "Led a 6-member team through full prototype development from concept to physical assembly. Designed the mechanical form and ergonomics in SolidWorks, creating modular snap-fit components with detachable gel compartments for easy maintenance, and 3D printed and assembled prototypes to verify fit and structural integrity."
         ],
         "keyOutcomes": [
-            "Achieved reliable MQTT telemetry delivery across multi-node mesh at 30-second intervals.",
-            "ADXL345 vibration thresholds successfully flagged simulated chainsaw events in lab conditions.",
-            "Integrated GPS coordinates into MQTT payloads for incident geolocation on AWS IoT maps.",
-            "Designed modular firmware architecture enabling swappable sensor drivers."
+            "Developed a modular snap-fit prototype enabling easy assembly and component replacement.",
+            "Project secured a $5,000 development grant to advance BreezeCirc into a fully functional prototype.",
+            "Strengthened early skills in leadership, CAD modelling, and additive manufacturing."
         ],
         "systemSpecs": [
             {
-                "label": "MCU",
-                "value": "ESP32 / Xiao ESP32C3"
+                "label": "ROLE",
+                "value": "Team Leader & Mech. Design"
             },
             {
-                "label": "PROTOCOL",
-                "value": "MQTT over TLS"
+                "label": "DURATION",
+                "value": "5 Weeks"
             },
             {
-                "label": "CLOUD",
-                "value": "AWS IoT Core + SNS"
-            },
-            {
-                "label": "SENSORS",
-                "value": "ADXL345, SHT31, GPS"
-            }
-        ],
-        "systemStatus": "FIELD-READY",
-        "viewPort": "0xC4D1"
-    },
-    {
-        "id": 3,
-        "slug": "zabbix-network-monitoring",
-        "name": "ZABBIX MONITORING POC",
-        "archiveRef": "INTERN-2024 // SWINBURNE IT",
-        "title": "ZABBIX MONITORING POC",
-        "subtitle": "Enterprise Network Monitoring Proof-of-Concept — Cost Reduction Initiative",
-        "category": "Research",
-        "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=80",
-        "tags": [
-            "Zabbix",
-            "Grafana",
-            "PRTG",
-            "Trend Vision One",
-            "Linux"
-        ],
-        "coreTech": [
-            "Zabbix",
-            "Grafana",
-            "PRTG",
-            "Trend Vision One",
-            "ANY.RUN",
-            "Linux",
-            "SNMP"
-        ],
-        "summary": "Designed and implemented a Zabbix + Grafana monitoring stack as a cost-effective alternative to PRTG during a Swinburne IT department internship. Conducted endpoint security audits across hundreds of campus devices and performed malware behavioral analysis using ANY.RUN sandbox.",
-        "description": [
-            "Executed a full IT asset inventory across the Swinburne Sarawak campus, auditing endpoint security posture via Trend Vision One. Documented findings and produced remediation reports covering patch compliance, agent health, and policy gaps across Windows and macOS endpoints.",
-            "Deployed a Zabbix POC with Grafana dashboards, demonstrating feature parity with PRTG at significantly lower licensing cost. The initiative was formally presented to IT leadership with a cost-benefit analysis supporting a transition recommendation."
-        ],
-        "keyOutcomes": [
-            "Audited 200+ campus endpoints for policy compliance using Trend Vision One.",
-            "Delivered a Zabbix POC that matched PRTG feature coverage at reduced licensing cost.",
-            "Identified and reported 3 active malware samples via ANY.RUN behavioral sandbox analysis.",
-            "Produced formal IT documentation and presented findings to department stakeholders."
-        ],
-        "systemSpecs": [
-            {
-                "label": "SCOPE",
-                "value": "200+ Endpoints"
-            },
-            {
-                "label": "TOOLING",
-                "value": "Zabbix, Grafana, Zabbix"
-            },
-            {
-                "label": "ANALYSIS",
-                "value": "ANY.RUN Sandbox"
+                "label": "TEAM",
+                "value": "6 Engineering Students"
             },
             {
                 "label": "OUTCOME",
-                "value": "Cost Reduction POC"
+                "value": "$5,000 Dev Grant"
             }
         ],
         "systemStatus": "COMPLETED",
-        "viewPort": "0xE7B2"
+        "viewPort": "0xB1C1"
+    },
+    {
+        "id": 2,
+        "slug": "sortify-parcel-sorting",
+        "name": "SORTIFY — PARCEL SORTING SYSTEM",
+        "archiveRef": "PROJ-002 // AUTOMATED LOGISTICS",
+        "title": "SORTIFY",
+        "subtitle": "Automated Parcel Size Sorting System for Efficient Logistics Handling",
+        "category": "Hardware",
+        "images": [
+            "/src/assets/Projects/Sortify/Sortify.png",
+            "/src/assets/Projects/Sortify/Sortify1.png",
+            "/src/assets/Projects/Sortify/Sortify2.png",
+            "/src/assets/Projects/Sortify/Sortify3.png"
+        ],
+        "tags": [
+            "PLC",
+            "Arduino",
+            "Pneumatics",
+            "Embedded Systems"
+        ],
+        "coreTech": [
+            "PLC Programming & Ladder Logic",
+            "Arduino (Embedded System)",
+            "Time-of-Flight & Proximity Sensors",
+            "Pneumatic Actuators",
+            "Conveyor Belt Wiring",
+            "Electrical Wiring (230V to 24V / 5V)",
+            "Safety Integration (E-Stop & Interlocks)"
+        ],
+        "summary": "Automated parcel sorting system using time-of-flight sensors to measure dimensions and PLC-controlled pneumatic actuators to route parcels to designated bins. Designed and wired all electrical systems including PLC, Arduino, and conveyor belt.",
+        "description": [
+            "E-commerce logistics demand faster, accurate, and gentle parcel handling. Sortify automates parcel sorting by size, using time-of-flight sensors to measure dimensions and PLC-controlled pneumatic actuators to direct parcels to bins, while ensuring safety and package protection.",
+            "Initiated the system concept and led a 5-member multidisciplinary team. Designed and wired all electrical systems including PLC, Arduino, and conveyor belt integration. Programmed PLC ladder logic and Arduino firmware to automate detection and sorting, and integrated safety features including emergency stop and system interlocks."
+        ],
+        "keyOutcomes": [
+            "Developed a fully functional prototype capable of automated parcel sorting.",
+            "Secured hands-on experience in PLC programming, Arduino integration, sensors, and pneumatics.",
+            "Gained leadership experience managing a 5-member multidisciplinary team.",
+            "Enhanced problem-solving skills through iterative testing and calibration."
+        ],
+        "systemSpecs": [
+            {
+                "label": "ROLE",
+                "value": "Team Leader & Elec. Lead"
+            },
+            {
+                "label": "DURATION",
+                "value": "10 Weeks"
+            },
+            {
+                "label": "TEAM",
+                "value": "5 Engineering Students"
+            },
+            {
+                "label": "OUTCOME",
+                "value": "Functional Prototype"
+            }
+        ],
+        "systemStatus": "COMPLETED",
+        "viewPort": "0xA2D3"
+    },
+    {
+        "id": 3,
+        "slug": "formify-vacuum-former",
+        "name": "FORMIFY — VACUUM FORMER",
+        "archiveRef": "PROJ-003 // MONASH SHELL ECO-MARATHON",
+        "title": "FORMIFY",
+        "subtitle": "Custom Vacuum Forming Machine for Lightweight Aerodynamic Car Components",
+        "category": "Hardware",
+        "images": [
+            "/src/assets/Projects/Formify/Formify.png",
+            "/src/assets/Projects/Formify/Formify1.png",
+            "/src/assets/Projects/Formify/Formify2.png",
+            "/src/assets/Projects/Formify/Formify3.png"
+        ],
+        "tags": [
+            "PID Control",
+            "Electrical Wiring",
+            "CAD",
+            "Laser Cutting"
+        ],
+        "coreTech": [
+            "PID Temperature Control",
+            "Industrial Heating Elements",
+            "Electrical Wiring & Control Panel",
+            "Laser Cutting (Vacuum Bed)",
+            "Mechanical CAD",
+            "Vacuum System Integration"
+        ],
+        "summary": "Large-scale vacuum forming machine enabling the Monash Shell Eco-Marathon Team to self-manufacture lightweight windshields and aerodynamic components, delivered within a $1,000 budget. Responsible for PID control design and all electrical wiring.",
+        "description": [
+            "Producing custom lightweight plastic components for aerodynamic vehicles is costly and time-consuming. Formify was developed as a large-scale vacuum forming machine to enable the Monash Shell Eco-Marathon Team to self-manufacture windshields and body components efficiently.",
+            "Designed and wired the PID controller and control panel for precise temperature regulation of industrial heating elements. Performed laser cutting on vacuum bed panels to optimise airflow distribution. Collaborated with SEM stakeholders to understand performance requirements and assisted in system assembly and troubleshooting under tight resource constraints."
+        ],
+        "keyOutcomes": [
+            "Formed plastic parts to target size and depth (~0.5 m) within a $1,000 budget.",
+            "Enabled the SEM team to self-produce lightweight components, reducing reliance on external suppliers.",
+            "Gained hands-on experience in PID control, industrial heating, vacuum mechanics, and electrical wiring."
+        ],
+        "systemSpecs": [
+            {
+                "label": "ROLE",
+                "value": "Electrical & Control Tech."
+            },
+            {
+                "label": "DURATION",
+                "value": "12 Weeks"
+            },
+            {
+                "label": "TEAM",
+                "value": "4 Engineering Students"
+            },
+            {
+                "label": "BUDGET",
+                "value": "$1,000"
+            }
+        ],
+        "systemStatus": "COMPLETED",
+        "viewPort": "0xC3E4"
     },
     {
         "id": 4,
-        "slug": "plant-species-classifier",
-        "name": "PLANT SPECIES CLASSIFIER",
-        "archiveRef": "COS30082-2025 // APPLIED ML",
-        "title": "PLANT SPECIES CLASSIFIER",
-        "subtitle": "Domain-Adaptive Species Classification via DINOv2 Feature Extraction",
-        "category": "Research",
-        "image": "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?w=800&q=80",
+        "slug": "fpga-video-processing",
+        "name": "FPGA VIDEO PROCESSING SYSTEM",
+        "archiveRef": "PROJ-004 // DE10-LITE + ESP32-CAM",
+        "title": "FPGA VIDEO PROCESSOR",
+        "subtitle": "Real-Time Hardware-Accelerated Image Processing on DE10-Lite FPGA with ESP32-CAM",
+        "category": "Hardware",
+        "images": [
+            "/src/assets/Projects/FPGA/fpga.png",
+            "/src/assets/Projects/FPGA/fpga1.png",
+            "/src/assets/Projects/FPGA/fpga2.png"
+        ],
         "tags": [
-            "Python",
-            "DINOv2",
-            "scikit-learn",
-            "SVM",
-            "Random Forest"
+            "FPGA",
+            "Nios II",
+            "SPI",
+            "VGA",
+            "Embedded Systems"
         ],
         "coreTech": [
-            "Python",
-            "DINOv2 (ViT-B/14)",
-            "scikit-learn",
-            "Random Forest",
-            "SVM",
-            "DANN",
-            "Prototypical Networks"
+            "DE10-Lite FPGA (Nios II Multiprocessor)",
+            "ESP32-CAM",
+            "FPGA Image Processing (Flip, Blur, Sobel)",
+            "SPI Communication",
+            "VGA Rendering",
+            "Hardware-Software Co-Design",
+            "Concurrency & Memory Synchronization"
         ],
-        "summary": "A machine learning pipeline for plant species classification addressing the herbarium-to-field domain gap. Leveraged DINOv2 (ViT-B/14) as a frozen feature extractor, evaluated Random Forest and SVM classifiers, and explored domain adaptation techniques including DANN and Prototypical Networks.",
+        "summary": "Real-time embedded image processing system on a DE10-Lite FPGA, capturing live video from ESP32-CAM and applying hardware-accelerated effects with interactive controls via accelerometer and gyroscope. Achieved 30 FPS and 52x speedup in edge detection.",
         "description": [
-            "Built a feature extraction pipeline using Meta's DINOv2 ViT-B/14 model, generating 768-dimensional embeddings for both herbarium specimen images and real-world field photographs. The domain gap between controlled herbarium scans and varied field conditions presented the core classification challenge.",
-            "Benchmarked Random Forest and SVM classifiers on extracted features with hyperparameter tuning. Explored Prototypical Networks for few-shot generalization and Domain-Adversarial Neural Networks (DANN) for explicit domain adaptation, analyzing accuracy trade-offs across methods."
+            "Real-time video processing on embedded systems is challenging due to limited FPGA resources and strict timing constraints. This project implements a hardware-accelerated image processing pipeline supporting flip, Gaussian blur, and Sobel edge detection with single and quad display modes.",
+            "Developed a multiprocessor framework using 3 Nios II processors for concurrent operation: ProcA handling image processing, ProcB managing SPI communication and accelerometer/gyroscope input, and ProcC driving VGA rendering. Implemented display mode switching, gesture controls, and optimised processor concurrency to maximise FPS."
         ],
         "keyOutcomes": [
-            "Achieved top-1 accuracy of 87.3% on held-out field image test set using SVM + DINOv2 features.",
-            "Demonstrated 12% accuracy improvement over baseline ResNet-50 transfer learning approach.",
-            "Prototypical Networks showed strong few-shot generalization on rare species subsets.",
-            "Produced full ablation study comparing feature extractor choices and classifier architectures."
+            "Achieved 30 FPS in full RGB mode on resource-constrained FPGA hardware.",
+            "Implemented hardware-accelerated filtering with up to 52x speedup in edge detection.",
+            "Successfully demonstrated real-time hardware-software integration with motion sensor interactivity.",
+            "Gained deep skills in FPGA multiprocessor synchronization and real-time system design."
         ],
         "systemSpecs": [
             {
-                "label": "BACKBONE",
-                "value": "DINOv2 ViT-B/14"
+                "label": "ROLE",
+                "value": "Embedded & FPGA Engineer"
             },
             {
-                "label": "CLASSIFIERS",
-                "value": "SVM, Random Forest"
+                "label": "DURATION",
+                "value": "6 Weeks"
             },
             {
-                "label": "DATASET",
-                "value": "Herbarium + Field Images"
+                "label": "TEAM",
+                "value": "2 Engineering Students"
             },
             {
-                "label": "TOP-1 ACC.",
-                "value": "87.3%"
-            }
-        ],
-        "systemStatus": "ARCHIVED",
-        "viewPort": "0x3F9A"
-    },
-    {
-        "id": 5,
-        "slug": "aws-ha-file-manager",
-        "name": "AWS HA FILE MANAGER",
-        "archiveRef": "COS20019-2025 // CLOUD COMPUTING",
-        "title": "AWS HA FILE MANAGER",
-        "subtitle": "Highly Available Cloud File Manager on AWS Multi-AZ Infrastructure",
-        "category": "Software",
-        "image": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&q=80",
-        "tags": [
-            "AWS",
-            "EC2",
-            "RDS",
-            "S3",
-            "ALB",
-            "VPC",
-            "Auto Scaling"
-        ],
-        "coreTech": [
-            "AWS VPC",
-            "EC2 + Auto Scaling",
-            "RDS (Multi-AZ)",
-            "S3",
-            "Application Load Balancer",
-            "CloudFront",
-            "Route 53"
-        ],
-        "summary": "Designed and deployed a highly available web-based file manager on AWS, spanning a custom VPC with public/private subnets across multiple availability zones. The architecture leverages EC2 Auto Scaling Groups, an Application Load Balancer, RDS Multi-AZ for persistence, and S3 for object storage.",
-        "description": [
-            "Architected a three-tier web application within a custom AWS VPC using public subnets for the ALB and private subnets for EC2 application instances and RDS. Auto Scaling Groups with launch templates ensure horizontal scalability under variable load conditions.",
-            "Configured RDS MySQL with Multi-AZ standby for automatic failover, S3 bucket policies for secure file object storage, and ALB listener rules for traffic distribution. Infrastructure provisioned via AWS Console and documented with architecture diagrams for academic assessment."
-        ],
-        "keyOutcomes": [
-            "Achieved 99.9% simulated uptime SLA across AZ failover tests with RDS Multi-AZ.",
-            "ALB correctly distributed traffic across 3 EC2 instances under load simulation.",
-            "S3 lifecycle policies configured for cost-optimized cold storage tiering.",
-            "Full VPC network diagram and security group matrix produced in deliverables."
-        ],
-        "systemSpecs": [
-            {
-                "label": "REGION",
-                "value": "ap-southeast-1 (SG)"
-            },
-            {
-                "label": "COMPUTE",
-                "value": "EC2 + Auto Scaling"
-            },
-            {
-                "label": "DATABASE",
-                "value": "RDS MySQL Multi-AZ"
-            },
-            {
-                "label": "STORAGE",
-                "value": "Amazon S3"
-            }
-        ],
-        "systemStatus": "ARCHIVED",
-        "viewPort": "0x91CD"
-    },
-    {
-        "id": 6,
-        "slug": "metamorphic-testing-suite",
-        "name": "METAMORPHIC TESTING SUITE",
-        "archiveRef": "SWE30009-2025 // SOFTWARE TESTING",
-        "title": "METAMORPHIC TEST SUITE",
-        "subtitle": "Automated Mutation Testing & CI/CD Pipeline for Billing System Validation",
-        "category": "Software",
-        "image": "https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=800&q=80",
-        "tags": [
-            "C#",
-            "NUnit",
-            "Selenium",
-            "GitHub Actions",
-            "Jest",
-            "Mutation Testing"
-        ],
-        "coreTech": [
-            "C# / .NET",
-            "NUnit",
-            "Stryker Mutator",
-            "Selenium WebDriver",
-            "GitHub Actions",
-            "Jest",
-            "CI/CD"
-        ],
-        "summary": "Developed a comprehensive software testing suite covering metamorphic testing, mutation testing, Selenium UI automation, and Jest unit testing across two systems: a dessert shop billing engine in C# and a Student Study Planner web application. CI/CD integration via GitHub Actions automates test execution on every push.",
-        "description": [
-            "Designed and implemented 15 metamorphic relations for the billing system, deriving follow-up test cases to detect semantic bugs not caught by traditional oracle-based tests. Applied Stryker Mutator to measure mutation score and identify weaknesses in the test suite's fault-detection capability.",
-            "Built Selenium WebDriver test scripts for UI regression on the Study Planner frontend, covering critical user flows including login, plan generation, and unit management. All test pipelines are integrated into GitHub Actions with pass/fail reporting and artifact uploads."
-        ],
-        "keyOutcomes": [
-            "Achieved 91% mutation score on billing system after suite hardening with additional MRs.",
-            "15 metamorphic relations defined and validated across equivalence partitions.",
-            "Selenium suite covered 8 critical user flows with cross-browser test runs.",
-            "GitHub Actions CI pipeline reduced manual regression effort by over 70%."
-        ],
-        "systemSpecs": [
-            {
-                "label": "LANGUAGE",
-                "value": "C# / JavaScript"
-            },
-            {
-                "label": "FRAMEWORKS",
-                "value": "NUnit, Jest, Selenium"
-            },
-            {
-                "label": "MUTATION",
-                "value": "Stryker Mutator"
-            },
-            {
-                "label": "CI/CD",
-                "value": "GitHub Actions"
+                "label": "FPS",
+                "value": "30 FPS (RGB Mode)"
             }
         ],
         "systemStatus": "COMPLETED",
-        "viewPort": "0x5D72"
+        "viewPort": "0xD4F5"
+    },
+    {
+        "id": 5,
+        "slug": "penguinpi-autonomous-robot",
+        "name": "PENGUINPI — AUTONOMOUS ROBOT",
+        "archiveRef": "PROJ-005 // SLAM + YOLO NAVIGATION",
+        "title": "PENGUINPI",
+        "subtitle": "Fully Autonomous Retail Assistant Robot with SLAM Mapping and YOLO Detection",
+        "category": "Research",
+        "images": [
+            "/src/assets/Projects/PenguinPi/Penguin.png",
+            "/src/assets/Projects/PenguinPi/Penguin1.png",
+            "/src/assets/Projects/PenguinPi/Penguin2.png"
+        ],
+        "tags": [
+            "SLAM",
+            "YOLO",
+            "A* Path Planning",
+            "Python",
+            "Robotics"
+        ],
+        "coreTech": [
+            "SLAM Mapping & Localization",
+            "A* Path Planning & Obstacle Avoidance",
+            "YOLO Object Detection (Real-Time)",
+            "DBSCAN Clustering",
+            "Embedded Real-Time System Integration"
+        ],
+        "summary": "Fully autonomous robot that maps its environment using SLAM, detects fruits with YOLO, and navigates safely via A* path planning with obstacle avoidance. Scored second-highest in live demonstration with near-perfect fruit collection.",
+        "description": [
+            "Autonomous retail robots must navigate cluttered environments safely while detecting and interacting with objects in real time. PenguinPi simulates a retail assistant by performing SLAM-based mapping, YOLO-based fruit detection, and obstacle-aware navigation, integrating perception, mapping, and planning into a single autonomous system.",
+            "Implemented fruit mapping using DBSCAN clustering and designed an A* path planner with obstacle-penalty cost for safe navigation. Developed front-obstacle detection and recovery behaviour including reverse and 360 degree scan. Trained and deployed YOLO for real-time inference and integrated perception, mapping, and planning into a unified autonomous workflow."
+        ],
+        "keyOutcomes": [
+            "Achieved fully autonomous mapping and navigation in a continuous task.",
+            "Robot navigated accurately with obstacle-aware paths and reliable fruit detection.",
+            "Scored second-highest in live demo — perfect fruit collection, minor light collision.",
+            "Gained hands-on skills in autonomous navigation, SLAM, and robotics perception-planning pipelines."
+        ],
+        "systemSpecs": [
+            {
+                "label": "ROLE",
+                "value": "Autonomous Systems Eng."
+            },
+            {
+                "label": "DURATION",
+                "value": "12 Weeks"
+            },
+            {
+                "label": "TEAM",
+                "value": "2 Engineering Students"
+            },
+            {
+                "label": "DEMO RESULT",
+                "value": "2nd Highest Score"
+            }
+        ],
+        "systemStatus": "COMPLETED",
+        "viewPort": "0xE5A6"
+    },
+    {
+        "id": 6,
+        "slug": "robot-dog-voice-ai",
+        "name": "ROBOT DOG — VOICE AI CONTROL",
+        "archiveRef": "PROJ-006 // MONASH AUTOMATION",
+        "title": "ROBOT DOG RESKIN",
+        "subtitle": "Unitree Go1 Robot Dog with Friendly Design Features and Voice AI Control",
+        "category": "Hardware",
+        "images": [
+            "/src/assets/Projects/Robot_Dog_Reskinning/robot.png",
+            "/src/assets/Projects/Robot_Dog_Reskinning/robot1.png"
+        ],
+        "tags": [
+            "CAD",
+            "3D Printing",
+            "Raspberry Pi",
+            "Voice AI"
+        ],
+        "coreTech": [
+            "CAD & 3D Printing",
+            "Raspberry Pi 4 Integration",
+            "Voice AI Programming (ChatGPT API)",
+            "Mechanical & Electrical Modification"
+        ],
+        "summary": "Enhanced a Unitree Go1 robot dog with friendly physical features and voice AI control for Monash Automation school outreach demonstrations. Designed and 3D-printed custom mounts and a ball-joint tail, and developed ChatGPT-powered voice command control.",
+        "description": [
+            "As part of Monash Automation's outreach initiative, this project aimed to make the Unitree Go1 robot dog more engaging and approachable for school demonstrations. The robot was enhanced with friendly physical features and voice AI control, enabling natural speech commands for younger audiences.",
+            "Designed and 3D-printed a custom Raspberry Pi mount for seamless AI hardware integration. Developed voice command functionality using the ChatGPT API for natural language control. CAD-designed and 3D-printed a ball-and-joint tail to enhance perceived friendliness, and assisted in all mechanical and electrical modifications to integrate the design with AI control."
+        ],
+        "keyOutcomes": [
+            "Delivered a friendly, interactive Unitree Go1 robot dog for school demonstrations.",
+            "Enabled voice-controlled AI interactions, significantly improving audience engagement.",
+            "Gained practical experience in prototyping, CAD/3D printing, and AI integration."
+        ],
+        "systemSpecs": [
+            {
+                "label": "ROLE",
+                "value": "Mech. & Electrical Tech."
+            },
+            {
+                "label": "DURATION",
+                "value": "12 Weeks"
+            },
+            {
+                "label": "TEAM",
+                "value": "7 Engineering Students"
+            },
+            {
+                "label": "AI",
+                "value": "ChatGPT API"
+            }
+        ],
+        "systemStatus": "COMPLETED",
+        "viewPort": "0xF6B7"
     }
 ]

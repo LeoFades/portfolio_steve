@@ -11,7 +11,7 @@ export interface Project {
   title: string;
   subtitle: string;
   category: 'Hardware' | 'Software' | 'VLSI' | 'Research';
-  image: string;
+  images: string[];
   tags: string[];
   coreTech: string[];
   summary: string;
