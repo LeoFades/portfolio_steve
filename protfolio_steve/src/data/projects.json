@@ -120,6 +120,65 @@
     },
     {
         "id": 3,
+        "slug": "penguinpi-autonomous-robot",
+        "name": "PENGUINPI — AUTONOMOUS ROBOT",
+        "archiveRef": "PROJ-005 // SLAM + YOLO NAVIGATION",
+        "title": "PENGUINPI",
+        "subtitle": "Fully Autonomous Retail Assistant Robot with SLAM Mapping and YOLO Detection",
+        "category": "Research",
+        "images": [
+            "/Projects/PenguinPi/Penguin.png",
+            "/Projects/PenguinPi/Penguin1.png",
+            "/Projects/PenguinPi/Penguin2.png"
+        ],
+        "tags": [
+            "SLAM",
+            "YOLO",
+            "A* Path Planning",
+            "Python",
+            "Robotics"
+        ],
+        "coreTech": [
+            "SLAM Mapping & Localization",
+            "A* Path Planning & Obstacle Avoidance",
+            "YOLO Object Detection (Real-Time)",
+            "DBSCAN Clustering",
+            "Embedded Real-Time System Integration"
+        ],
+        "summary": "Fully autonomous robot that maps its environment using SLAM, detects fruits with YOLO, and navigates safely via A* path planning with obstacle avoidance. Scored second-highest in live demonstration with near-perfect fruit collection.",
+        "description": [
+            "Autonomous retail robots must navigate cluttered environments safely while detecting and interacting with objects in real time. PenguinPi simulates a retail assistant by performing SLAM-based mapping, YOLO-based fruit detection, and obstacle-aware navigation, integrating perception, mapping, and planning into a single autonomous system.",
+            "Implemented fruit mapping using DBSCAN clustering and designed an A* path planner with obstacle-penalty cost for safe navigation. Developed front-obstacle detection and recovery behaviour including reverse and 360 degree scan. Trained and deployed YOLO for real-time inference and integrated perception, mapping, and planning into a unified autonomous workflow."
+        ],
+        "keyOutcomes": [
+            "Achieved fully autonomous mapping and navigation in a continuous task.",
+            "Robot navigated accurately with obstacle-aware paths and reliable fruit detection.",
+            "Scored second-highest in live demo — perfect fruit collection, minor light collision.",
+            "Gained hands-on skills in autonomous navigation, SLAM, and robotics perception-planning pipelines."
+        ],
+        "systemSpecs": [
+            {
+                "label": "ROLE",
+                "value": "Autonomous Systems Eng."
+            },
+            {
+                "label": "DURATION",
+                "value": "12 Weeks"
+            },
+            {
+                "label": "TEAM",
+                "value": "2 Engineering Students"
+            },
+            {
+                "label": "DEMO RESULT",
+                "value": "2nd Highest Score"
+            }
+        ],
+        "systemStatus": "COMPLETED",
+        "viewPort": "0xE5A6"
+    },
+    {
+        "id": 4,
         "slug": "formify-vacuum-former",
         "name": "FORMIFY — VACUUM FORMER",
         "archiveRef": "PROJ-003 // MONASH SHELL ECO-MARATHON",
@@ -178,7 +237,7 @@
         "viewPort": "0xC3E4"
     },
     {
-        "id": 4,
+        "id": 5,
         "slug": "fpga-video-processing",
         "name": "FPGA VIDEO PROCESSING SYSTEM",
         "archiveRef": "PROJ-004 // DE10-LITE + ESP32-CAM",
@@ -237,65 +296,6 @@
         ],
         "systemStatus": "COMPLETED",
         "viewPort": "0xD4F5"
-    },
-    {
-        "id": 5,
-        "slug": "penguinpi-autonomous-robot",
-        "name": "PENGUINPI — AUTONOMOUS ROBOT",
-        "archiveRef": "PROJ-005 // SLAM + YOLO NAVIGATION",
-        "title": "PENGUINPI",
-        "subtitle": "Fully Autonomous Retail Assistant Robot with SLAM Mapping and YOLO Detection",
-        "category": "Research",
-        "images": [
-            "/Projects/PenguinPi/Penguin.png",
-            "/Projects/PenguinPi/Penguin1.png",
-            "/Projects/PenguinPi/Penguin2.png"
-        ],
-        "tags": [
-            "SLAM",
-            "YOLO",
-            "A* Path Planning",
-            "Python",
-            "Robotics"
-        ],
-        "coreTech": [
-            "SLAM Mapping & Localization",
-            "A* Path Planning & Obstacle Avoidance",
-            "YOLO Object Detection (Real-Time)",
-            "DBSCAN Clustering",
-            "Embedded Real-Time System Integration"
-        ],
-        "summary": "Fully autonomous robot that maps its environment using SLAM, detects fruits with YOLO, and navigates safely via A* path planning with obstacle avoidance. Scored second-highest in live demonstration with near-perfect fruit collection.",
-        "description": [
-            "Autonomous retail robots must navigate cluttered environments safely while detecting and interacting with objects in real time. PenguinPi simulates a retail assistant by performing SLAM-based mapping, YOLO-based fruit detection, and obstacle-aware navigation, integrating perception, mapping, and planning into a single autonomous system.",
-            "Implemented fruit mapping using DBSCAN clustering and designed an A* path planner with obstacle-penalty cost for safe navigation. Developed front-obstacle detection and recovery behaviour including reverse and 360 degree scan. Trained and deployed YOLO for real-time inference and integrated perception, mapping, and planning into a unified autonomous workflow."
-        ],
-        "keyOutcomes": [
-            "Achieved fully autonomous mapping and navigation in a continuous task.",
-            "Robot navigated accurately with obstacle-aware paths and reliable fruit detection.",
-            "Scored second-highest in live demo — perfect fruit collection, minor light collision.",
-            "Gained hands-on skills in autonomous navigation, SLAM, and robotics perception-planning pipelines."
-        ],
-        "systemSpecs": [
-            {
-                "label": "ROLE",
-                "value": "Autonomous Systems Eng."
-            },
-            {
-                "label": "DURATION",
-                "value": "12 Weeks"
-            },
-            {
-                "label": "TEAM",
-                "value": "2 Engineering Students"
-            },
-            {
-                "label": "DEMO RESULT",
-                "value": "2nd Highest Score"
-            }
-        ],
-        "systemStatus": "COMPLETED",
-        "viewPort": "0xE5A6"
     },
     {
         "id": 6,
