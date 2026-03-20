@@ -125,7 +125,7 @@
         "archiveRef": "PROJ-005 // SLAM + YOLO NAVIGATION",
         "title": "PENGUINPI",
         "subtitle": "Fully Autonomous Retail Assistant Robot with SLAM Mapping and YOLO Detection",
-        "category": "Research",
+        "category": "Software",
         "images": [
             "/Projects/PenguinPi/Penguin.png",
             "/Projects/PenguinPi/Penguin1.png",
