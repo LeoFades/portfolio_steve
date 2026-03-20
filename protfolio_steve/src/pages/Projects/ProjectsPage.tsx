@@ -5,10 +5,12 @@ import ProjectModal from '@/components/ui/ProjectModal/ProjectModal';
 import styles from './ProjectsPage.module.css';
 import AnimatedContent from '@/components/ui/FloatIn/FloatIn';
 
-type Category = 'All Projects' | 'Hardware' | 'Software' | 'VLSI' | 'Research';
+// type Category = 'All Projects' | 'Hardware' | 'Software' | 'VLSI' | 'Research';
+type Category = 'All Projects' | 'Hardware' | 'Software';
 type SortOption = 'Recent' | 'Alphabetical';
 
-const CATEGORIES: Category[] = ['All Projects', 'Hardware', 'Software', 'VLSI', 'Research'];
+const CATEGORIES: Category[] = ['All Projects', 'Hardware', 'Software'];
+// const CATEGORIES: Category[] = ['All Projects', 'Hardware', 'Software', 'VLSI', 'Research'];
 const SORT_OPTIONS: SortOption[] = ['Recent', 'Alphabetical'];
 const ITEMS_PER_PAGE = 6;
 
@@ -24,25 +26,25 @@ const CATEGORY_ICONS: Partial<Record<Category, React.ReactNode>> = {
             <path d="M3 4.5L1 6.5L3 8.5M10 4.5L12 6.5L10 8.5M7.5 3L5.5 10" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
     ),
-    VLSI: (
-        <svg width="13" height="13" viewBox="0 0 13 13" fill="none">
-            <rect x="2" y="2" width="9" height="9" rx="1" stroke="currentColor" strokeWidth="1.2" />
-            <rect x="4.5" y="4.5" width="4" height="4" rx="0.5" stroke="currentColor" strokeWidth="1" />
-        </svg>
-    ),
-    Research: (
-        <svg width="13" height="13" viewBox="0 0 13 13" fill="none">
-            <circle cx="5.5" cy="5.5" r="3.5" stroke="currentColor" strokeWidth="1.2" />
-            <path d="M8.5 8.5L11.5 11.5" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
-        </svg>
-    ),
+    // VLSI: (
+    //     <svg width="13" height="13" viewBox="0 0 13 13" fill="none">
+    //         <rect x="2" y="2" width="9" height="9" rx="1" stroke="currentColor" strokeWidth="1.2" />
+    //         <rect x="4.5" y="4.5" width="4" height="4" rx="0.5" stroke="currentColor" strokeWidth="1" />
+    //     </svg>
+    // ),
+    // Research: (
+    //     <svg width="13" height="13" viewBox="0 0 13 13" fill="none">
+    //         <circle cx="5.5" cy="5.5" r="3.5" stroke="currentColor" strokeWidth="1.2" />
+    //         <path d="M8.5 8.5L11.5 11.5" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
+    //     </svg>
+    // ),
 };
 
 const CATEGORY_COLORS: Partial<Record<Project['category'], { bg: string; color: string; border: string }>> = {
     Hardware: { bg: '#1a1a0d', color: '#b5a84e', border: '#2a280f' },
     Software: { bg: '#0d1a1a', color: '#4ea0b5', border: '#0f2828' },
-    VLSI: { bg: '#1a0d1a', color: '#b54ea0', border: '#280f28' },
-    Research: { bg: '#0d1a0d', color: '#4eb55a', border: '#0f280f' },
+    // VLSI: { bg: '#1a0d1a', color: '#b54ea0', border: '#280f28' },
+    // Research: { bg: '#0d1a0d', color: '#4eb55a', border: '#0f280f' },
 };
 
 export default function ProjectsPage() {
