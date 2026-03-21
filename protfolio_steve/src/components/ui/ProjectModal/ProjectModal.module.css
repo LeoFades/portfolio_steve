@@ -146,7 +146,7 @@
 .modalHeroImg {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     filter: brightness(0.45) saturate(0.6);
 }
 
