@@ -6,7 +6,7 @@
         "archiveRef": "PROJ-001 // $5,000 DEVELOPMENT GRANT",
         "title": "BREEZCIRC",
         "subtitle": "Portable Cooling Neck Fan with Reusable Gel-Cooling Technology",
-        "category": "Hardware",
+        "category": ["CAD & Mechanical Design"],
         "images": [
             "/Projects/BreezeCirc/BreezeCirc.png",
             "/Projects/BreezeCirc/BreezeCirc1.png",
@@ -64,7 +64,7 @@
         "archiveRef": "PROJ-002 // AUTOMATED LOGISTICS",
         "title": "SORTIFY",
         "subtitle": "Automated Parcel Size Sorting System for Efficient Logistics Handling",
-        "category": "Hardware",
+        "category": ["Embedded Systems", "PLC Programming"],
         "images": [
             "/Projects/Sortify/Sortify.png",
             "/Projects/Sortify/Sortify1.png",
@@ -125,7 +125,7 @@
         "archiveRef": "PROJ-005 // SLAM + YOLO NAVIGATION",
         "title": "PENGUINPI",
         "subtitle": "Fully Autonomous Retail Assistant Robot with SLAM Mapping and YOLO Detection",
-        "category": "Software",
+        "category": ["AI & Computer Vision"],
         "images": [
             "/Projects/PenguinPi/Penguin.png",
             "/Projects/PenguinPi/Penguin1.png",
@@ -184,7 +184,7 @@
         "archiveRef": "PROJ-003 // MONASH SHELL ECO-MARATHON",
         "title": "FORMIFY",
         "subtitle": "Custom Vacuum Forming Machine for Lightweight Aerodynamic Car Components",
-        "category": "Hardware",
+        "category": ["CAD & Mechanical Design", "PID Control"],
         "images": [
             "/Projects/Formify/Formify.png",
             "/Projects/Formify/Formify1.png",
@@ -243,7 +243,7 @@
         "archiveRef": "PROJ-004 // DE10-LITE + ESP32-CAM",
         "title": "FPGA VIDEO PROCESSOR",
         "subtitle": "Real-Time Hardware-Accelerated Image Processing on DE10-Lite FPGA with ESP32-CAM",
-        "category": "Hardware",
+        "category": ["Embedded Systems"],
         "images": [
             "/Projects/FPGA/fpga.png",
             "/Projects/FPGA/fpga1.png",
@@ -304,7 +304,7 @@
         "archiveRef": "PROJ-006 // MONASH AUTOMATION",
         "title": "ROBOT DOG RESKIN",
         "subtitle": "Unitree Go1 Robot Dog with Friendly Design Features and Voice AI Control",
-        "category": "Hardware",
+        "category": ["AI & Computer Vision"],
         "images": [
             "/Projects/Robot_Dog_Reskinning/robot.png",
             "/Projects/Robot_Dog_Reskinning/robot1.png"

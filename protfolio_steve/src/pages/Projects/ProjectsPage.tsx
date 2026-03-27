@@ -6,45 +6,87 @@ import styles from './ProjectsPage.module.css';
 import AnimatedContent from '@/components/ui/FloatIn/FloatIn';
 
 // type Category = 'All Projects' | 'Hardware' | 'Software' | 'VLSI' | 'Research';
-type Category = 'All Projects' | 'Hardware' | 'Software';
+// type Category = 'All Projects' | 'Hardware' | 'Software';
+type Category = 'All Projects' | 'Embedded Systems' | 'AI & Computer Vision' | 'PLC Programming' | 'CAD & Mechanical Design' | 'PID Control';
 type SortOption = 'Recent' | 'Alphabetical';
 
-const CATEGORIES: Category[] = ['All Projects', 'Hardware', 'Software'];
+// const CATEGORIES: Category[] = ['All Projects', 'Hardware', 'Software'];
+const CATEGORIES: Category[] = ['All Projects', 'Embedded Systems', 'AI & Computer Vision', 'PLC Programming', 'CAD & Mechanical Design', 'PID Control'];
 // const CATEGORIES: Category[] = ['All Projects', 'Hardware', 'Software', 'VLSI', 'Research'];
 const SORT_OPTIONS: SortOption[] = ['Recent', 'Alphabetical'];
 const ITEMS_PER_PAGE = 6;
 
+// const CATEGORY_ICONS: Partial<Record<Category, React.ReactNode>> = {
+//     Hardware: (
+//         <svg width="13" height="13" viewBox="0 0 13 13" fill="none">
+//             <circle cx="6.5" cy="6.5" r="5.5" stroke="currentColor" strokeWidth="1.2" />
+//             <circle cx="6.5" cy="6.5" r="2" fill="currentColor" />
+//         </svg>
+//     ),
+//     Software: (
+//         <svg width="13" height="13" viewBox="0 0 13 13" fill="none">
+//             <path d="M3 4.5L1 6.5L3 8.5M10 4.5L12 6.5L10 8.5M7.5 3L5.5 10" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" />
+//         </svg>
+//     ),
+//     // VLSI: (
+//     //     <svg width="13" height="13" viewBox="0 0 13 13" fill="none">
+//     //         <rect x="2" y="2" width="9" height="9" rx="1" stroke="currentColor" strokeWidth="1.2" />
+//     //         <rect x="4.5" y="4.5" width="4" height="4" rx="0.5" stroke="currentColor" strokeWidth="1" />
+//     //     </svg>
+//     // ),
+//     // Research: (
+//     //     <svg width="13" height="13" viewBox="0 0 13 13" fill="none">
+//     //         <circle cx="5.5" cy="5.5" r="3.5" stroke="currentColor" strokeWidth="1.2" />
+//     //         <path d="M8.5 8.5L11.5 11.5" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
+//     //     </svg>
+//     // ),
+// };
+
 const CATEGORY_ICONS: Partial<Record<Category, React.ReactNode>> = {
-    Hardware: (
+    'Embedded Systems': (
+        <svg width="13" height="13" viewBox="0 0 13 13" fill="none">
+            <rect x="2" y="2" width="9" height="9" rx="1" stroke="currentColor" strokeWidth="1.2" />
+            <rect x="4.5" y="4.5" width="4" height="4" rx="0.5" stroke="currentColor" strokeWidth="1" />
+        </svg>
+    ),
+    'AI & Computer Vision': (
+        <svg width="13" height="13" viewBox="0 0 13 13" fill="none">
+            <circle cx="5.5" cy="5.5" r="3.5" stroke="currentColor" strokeWidth="1.2" />
+            <path d="M8.5 8.5L11.5 11.5" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
+        </svg>
+    ),
+    'PLC Programming': (
+        <svg width="13" height="13" viewBox="0 0 13 13" fill="none">
+            <path d="M3 4.5L1 6.5L3 8.5M10 4.5L12 6.5L10 8.5M7.5 3L5.5 10" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+    ),
+    'CAD & Mechanical Design': (
         <svg width="13" height="13" viewBox="0 0 13 13" fill="none">
             <circle cx="6.5" cy="6.5" r="5.5" stroke="currentColor" strokeWidth="1.2" />
             <circle cx="6.5" cy="6.5" r="2" fill="currentColor" />
         </svg>
     ),
-    Software: (
-        <svg width="13" height="13" viewBox="0 0 13 13" fill="none">
-            <path d="M3 4.5L1 6.5L3 8.5M10 4.5L12 6.5L10 8.5M7.5 3L5.5 10" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" />
-        </svg>
+    'PID Control': (
+    <svg width="13" height="13" viewBox="0 0 13 13" fill="none">
+        <path d="M1 6.5h2M10 6.5h2M6.5 1v2M6.5 10v2" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" />
+        <circle cx="6.5" cy="6.5" r="3" stroke="currentColor" strokeWidth="1.2" />
+    </svg>
     ),
-    // VLSI: (
-    //     <svg width="13" height="13" viewBox="0 0 13 13" fill="none">
-    //         <rect x="2" y="2" width="9" height="9" rx="1" stroke="currentColor" strokeWidth="1.2" />
-    //         <rect x="4.5" y="4.5" width="4" height="4" rx="0.5" stroke="currentColor" strokeWidth="1" />
-    //     </svg>
-    // ),
-    // Research: (
-    //     <svg width="13" height="13" viewBox="0 0 13 13" fill="none">
-    //         <circle cx="5.5" cy="5.5" r="3.5" stroke="currentColor" strokeWidth="1.2" />
-    //         <path d="M8.5 8.5L11.5 11.5" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
-    //     </svg>
-    // ),
 };
 
-const CATEGORY_COLORS: Partial<Record<Project['category'], { bg: string; color: string; border: string }>> = {
-    Hardware: { bg: '#1a1a0d', color: '#b5a84e', border: '#2a280f' },
-    Software: { bg: '#0d1a1a', color: '#4ea0b5', border: '#0f2828' },
-    // VLSI: { bg: '#1a0d1a', color: '#b54ea0', border: '#280f28' },
-    // Research: { bg: '#0d1a0d', color: '#4eb55a', border: '#0f280f' },
+// const CATEGORY_COLORS: Partial<Record<Project['category'], { bg: string; color: string; border: string }>> = {
+//     Hardware: { bg: '#1a1a0d', color: '#b5a84e', border: '#2a280f' },
+//     Software: { bg: '#0d1a1a', color: '#4ea0b5', border: '#0f2828' },
+//     // VLSI: { bg: '#1a0d1a', color: '#b54ea0', border: '#280f28' },
+//     // Research: { bg: '#0d1a0d', color: '#4eb55a', border: '#0f280f' },
+// };
+
+const CATEGORY_COLORS: Partial<Record<string, { bg: string; color: string; border: string }>> = {
+    'Embedded Systems':       { bg: '#1a1a0d', color: '#b5a84e', border: '#2a280f' },
+    'AI & Computer Vision':   { bg: '#0d1a1a', color: '#4ea0b5', border: '#0f2828' },
+    'PLC Programming':        { bg: '#1a0d1a', color: '#b54ea0', border: '#280f28' },
+    'CAD & Mechanical Design':{ bg: '#0d1a0d', color: '#4eb55a', border: '#0f280f' },
+    'PID Control': { bg: '#1a0d0d', color: '#b56e4e', border: '#280f0f' },
 };
 
 export default function ProjectsPage() {
@@ -57,7 +99,7 @@ export default function ProjectsPage() {
     const filtered = useMemo(() => {
         let list = [...(projectsData as Project[])];
         if (activeCategory !== 'All Projects') {
-            list = list.filter((p) => p.category === activeCategory);
+            list = list.filter((p) => p.category.includes(activeCategory));
         }
         if (sortBy === 'Alphabetical') {
             list.sort((a, b) => a.title.localeCompare(b.title));
@@ -228,9 +270,46 @@ interface ProjectCardProps {
     onClick: () => void;
 }
 
-function ProjectCard({ project, onClick }: ProjectCardProps) {
-    const catStyle = CATEGORY_COLORS[project.category] ?? { bg: '#1a1a1a', color: '#888', border: '#2a2a2a' };
+// function ProjectCard({ project, onClick }: ProjectCardProps) {
+//     const catStyle = CATEGORY_COLORS[project.category] ?? { bg: '#1a1a1a', color: '#888', border: '#2a2a2a' };
 
+//     return (
+//         <article
+//             className={styles.projectCard}
+//             onClick={onClick}
+//             tabIndex={0}
+//             onKeyDown={(e: React.KeyboardEvent<HTMLElement>) => { if (e.key === 'Enter') onClick(); }}
+//         >
+//             <div className={styles.cardImageWrap}>
+//                 <img src={project.images[0]} alt={project.title} className={styles.cardImage} />
+//             </div>
+//             <div className={styles.cardBody}>
+//                 <div className={styles.cardTitleRow}>
+//                     <h2 className={styles.cardTitle}>{project.title}</h2>
+//                     <span
+//                         className={styles.cardBadge}
+//                         style={{
+//                             background: catStyle.bg,
+//                             color: catStyle.color,
+//                             borderColor: catStyle.border,
+//                         }}
+//                     >
+//                         {project.category.toUpperCase()}
+//                     </span>
+//                 </div>
+//                 <p className={styles.cardSummary}>{project.summary}</p>
+//                 <div className={styles.cardTags}>
+//                     {project.tags.slice(0, 3).map((tag) => (
+//                         <span key={tag} className={styles.cardTag}>{tag}</span>
+//                     ))}
+//                 </div>
+//             </div>
+//         </article>
+//     );
+// }
+
+// AFTER
+function ProjectCard({ project, onClick }: ProjectCardProps) {
     return (
         <article
             className={styles.projectCard}
@@ -244,16 +323,24 @@ function ProjectCard({ project, onClick }: ProjectCardProps) {
             <div className={styles.cardBody}>
                 <div className={styles.cardTitleRow}>
                     <h2 className={styles.cardTitle}>{project.title}</h2>
-                    <span
-                        className={styles.cardBadge}
-                        style={{
-                            background: catStyle.bg,
-                            color: catStyle.color,
-                            borderColor: catStyle.border,
-                        }}
-                    >
-                        {project.category.toUpperCase()}
-                    </span>
+                    <div style={{ display: 'flex', gap: '4px', flexWrap: 'wrap', justifyContent: 'flex-end' }}>
+                        {project.category.map((cat) => {
+                            const s = CATEGORY_COLORS[cat] ?? { bg: '#1a1a1a', color: '#888', border: '#2a2a2a' };
+                            return (
+                                <span
+                                    key={cat}
+                                    className={styles.cardBadge}
+                                    style={{
+                                        background: s.bg,
+                                        color: s.color,
+                                        borderColor: s.border,
+                                    }}
+                                >
+                                    {cat.toUpperCase()}
+                                </span>
+                            );
+                        })}
+                    </div>
                 </div>
                 <p className={styles.cardSummary}>{project.summary}</p>
                 <div className={styles.cardTags}>
