@@ -10,7 +10,7 @@ export interface Project {
   archiveRef: string;
   title: string;
   subtitle: string;
-  category: 'Hardware' | 'Software' | 'VLSI' | 'Research';
+  category: string[];
   images: string[];
   tags: string[];
   coreTech: string[];
