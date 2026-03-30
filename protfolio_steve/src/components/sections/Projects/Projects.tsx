@@ -37,7 +37,7 @@ export default function Projects() {
                             <div className={styles.overlay}>
 
                                 <span className={styles.projectId}>
-                                    {project.category} / {String(project.id).padStart(2, '0')}
+                                    {project.category.join(' · ')} / {String(project.id).padStart(2, '0')}
                                 </span>
 
                                 <h4 className={styles.projectTitle}>

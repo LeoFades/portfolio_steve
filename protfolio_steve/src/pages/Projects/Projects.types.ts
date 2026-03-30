@@ -10,7 +10,7 @@ export interface Project {
   archiveRef: string;
   title: string;
   subtitle: string;
-  category: ('Embedded Systems' | 'AI & Computer Vision' | 'PLC Programming' | 'CAD & Mechanical Design' | 'PID Control')[];
+  category: string[];
   images: string[];
   tags: string[];
   coreTech: string[];
