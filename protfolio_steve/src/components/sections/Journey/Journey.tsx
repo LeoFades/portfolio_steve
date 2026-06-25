@@ -5,7 +5,7 @@ export default function Journey() {
         <section id="journey" className={styles.section}>
             <div className={styles.container}>
 
-                <h2 className={styles.title}>Professional  Journey</h2>
+                <h2 className={styles.title}>Professional Journey</h2>
 
                 <div className={styles.grid}>
 
@@ -23,26 +23,34 @@ export default function Journey() {
                                     Project Engineer Intern — Stinablis Sdn Bhd
                                 </h4>
 
-                                <span className={styles.date}>
-                                    Jan 2026 - Feb 2026
-                                </span>
+                        <div className={styles.metaRow}>
+                            <span className={styles.date}>
+                                Jan 2026 - Feb 2026
+                            </span>
 
-                                <p className={styles.description}>
-                                    Led end-to-end reverse engineering workflows from 3D scan to functional prototype.
-                                </p>
-                                <p className={styles.description}>
-                                    Restored availability of a discontinued 1997 Mercedes-Benz W202 brake light housing, delivering functional
-                                    replacements for 5+ vehicles.
-                                </p>
-                                <p className={styles.description}>
-                                    Improved durability by replacing the housing’s brittle clip mechanism with screws mechanism.
-                                </p>
-                                <p className={styles.description}>
-                                    Integrated modern LED modules while preserving OEM mounting interfaces.
-                                </p>
-                                <p className={styles.description}>
-                                    Produced commemorative mementos for prominent startup programs, including Sarawak SaaS Accelerator and DIVA.
-                                </p>
+                            <span className={styles.location}>
+                                Sarawak, Malaysia
+                            </span>
+                        </div>
+
+                                <ul className={styles.descriptionList}>
+                                    <li>
+                                        Led end-to-end reverse engineering workflows from 3D scan to functional prototype.
+                                    </li>
+                                    <li>
+                                        Restored availability of a discontinued 1997 Mercedes-Benz W202 brake light housing, delivering functional
+                                        replacements for 5+ vehicles.
+                                    </li>
+                                    <li>
+                                        Improved durability by replacing the housing’s brittle clip mechanism with a screw-based mechanism.
+                                    </li>
+                                    <li>
+                                        Integrated modern LED modules while preserving OEM mounting interfaces.
+                                    </li>
+                                    <li>
+                                        Produced commemorative mementos for prominent startup programs, including Sarawak SaaS Accelerator and DIVA.
+                                    </li>
+                                </ul>
                             </div>
 
                             <div className={styles.item}>
@@ -51,24 +59,27 @@ export default function Journey() {
                                 <h4 className={styles.role}>
                                     Mechanical & Electrical Project Engineer — Monash Automation
                                 </h4>
-
+                            <div className={styles.metaRow}>
                                 <span className={styles.date}>
                                     Apr 2025 - Present
                                 </span>
 
-                                <p className={styles.description}>
-                                    Implemented AI integration and mechanical reskinning initiatives for a
-                                    Unitree Go1, enabling voice-command interaction.
+                                <span className={styles.location}>
+                                    Melbourne, Australia
+                                </span>
+                            </div>
 
-
-
-                                </p>
-                                <p className={styles.description}>
-                                    Developed real-time voice command interface by integrating ChatGPT API with Raspberry Pi 4.
-                                </p>
-                                <p className={styles.description}>
-                                    Contributed to mechanical redesign and external reskinning of the robot dog.
-                                </p>
+                                <ul className={styles.descriptionList}>
+                                    <li>
+                                        Collaborated on the mechanical reskinning and AI-enabled voice-command integration of a Unitree Go1 robotic dog.
+                                    </li>
+                                    <li>
+                                        Currently developing an AI microscope for microplastic detection with automated X-Y scanning platform.
+                                    </li>
+                                    <li>
+                                        Currently contribuiting to a WiFi-based patient vital sensing project for heart rate and respiratory monitoring.
+                                    </li>
+                                </ul>
                             </div>
 
                             <div className={styles.item}>
@@ -77,26 +88,30 @@ export default function Journey() {
                                 <h4 className={styles.role}>
                                     Treasurer & Electrical Technician — Shell Eco Marathon Team Monash
                                 </h4>
-
+                            
+                            <div className={styles.metaRow}>
                                 <span className={styles.date}>
                                     Feb 2024 - Jun 2025
                                 </span>
 
-                                <p className={styles.description}>
-                                    Managed SEM Team Monash’s RM70,000+ budget, ensuring accurate financial
-                                    tracking for international competition (Lombok, Indonesia).
+                                <span className={styles.location}>
+                                    Kuala Lumpur, Malaysia
+                                </span>
+                            </div>
 
-
-                                </p>
-                                <p className={styles.description}>
-                                    Oversaw finance transactions and expense approvals for team operations, coordinating with Monash Finance.
-
-                                </p>
-                                <p className={styles.description}>
-                                    Applied PID control system for vacuum former, maintaining ±2°C temperature stability and producing competition
-                                    qualified windshields.
-                                </p>
-
+                                <ul className={styles.descriptionList}>
+                                    <li>
+                                        Managed SEM Team Monash’s RM70,000+ budget, ensuring accurate financial tracking for international competition
+                                        in Lombok, Indonesia.
+                                    </li>
+                                    <li>
+                                        Oversaw finance transactions and expense approvals for team operations, coordinating with Monash Finance.
+                                    </li>
+                                    <li>
+                                        Applied PID control system for vacuum former, maintaining ±2°C temperature stability and producing
+                                        competition-qualified windshields.
+                                    </li>
+                                </ul>
                             </div>
 
                             <div className={styles.item}>
@@ -105,16 +120,23 @@ export default function Journey() {
                                 <h4 className={styles.role}>
                                     MyVaccination Frontline Volunteer — Ministry of Youth and Sports of Malaysia
                                 </h4>
-
+                            
+                            <div className={styles.metaRow}>
                                 <span className={styles.date}>
                                     Feb 2021 - Jul 2021
                                 </span>
 
-                                <p className={styles.description}>
-                                    Assisted doctors & nurses in vaccination operations during the national
-                                    COVID-19 rollout, helping 5,000+ patients daily.
+                                <span className={styles.location}>
+                                    Sarawak, Malaysia
+                                </span>
+                            </div>
 
-                                </p>
+                                <ul className={styles.descriptionList}>
+                                    <li>
+                                        Assisted doctors and nurses in vaccination operations during the national COVID-19 rollout, helping 5,000+
+                                        patients daily.
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -134,17 +156,25 @@ export default function Journey() {
                                     Bachelor of Engineering — Monash University
                                 </h4>
 
+                        <div className={styles.metaRow}>
                                 <span className={styles.date}>
                                     Feb 2023 - Present
                                 </span>
 
+                                <span className={styles.location}>
+                                    Melbourne, Australia
+                                </span>
+                        </div>
+
                                 <div className={styles.badge}>
-                                    GPA 3.83/4.0 | WAM 85.64/100
+                                    GPA 3.83/4.0   |   WAM 85.64/100
                                 </div>
 
-                                <p className={styles.description}>
-                                    Major in Robotic and Mechatronics Engineering. Minor in Artificial Intellegent in Engineering.
-                                </p>
+                                <ul className={styles.descriptionList}>
+                                    <li>
+                                        Majoring in Robotics and Mechatronics Engineering with a minor in Artificial Intelligence in Engineering.
+                                    </li>
+                                </ul>
                             </div>
 
                             <div className={styles.item}>
@@ -154,13 +184,25 @@ export default function Journey() {
                                     Monash University Foundation Year — Monash University
                                 </h4>
 
+                        <div className={styles.metaRow}>
                                 <span className={styles.date}>
                                     Jul 2021 - Jun 2022
                                 </span>
 
-                                <p className={styles.description}>
-                                    Completed course with a High Distinction score of 97.29 out of 100.
-                                </p>
+                                <span className={styles.location}>
+                                    Kuala Lumpur, Malaysia
+                                </span>
+                        </div>
+
+                                <div className={styles.badge}>
+                                    MUFY Score: 97.29/100   |   Top Scorer
+                                </div>
+
+                                <ul className={styles.descriptionList}>
+                                    <li>
+                                        Completed the course with a High Distinction score of 97.29 out of 100.
+                                    </li>
+                                </ul>
                             </div>
 
                             <div className={styles.item}>
@@ -170,14 +212,25 @@ export default function Journey() {
                                     Sijil Pelajaran Malaysia
                                 </h4>
 
+                            <div className={styles.metaRow}>
                                 <span className={styles.date}>
                                     Jan 2016 - Apr 2021
                                 </span>
 
-                                <p className={styles.description}>
-                                    Gruaduated high school and completed the Malaysian Certificate of Education with
-                                    10 As from the STEM stream.
-                                </p>
+                                <span className={styles.location}>
+                                    Sarawak, Malaysia
+                                </span>
+                            </div>
+
+                                <div className={styles.badge}>
+                                    SPM: Straight A's (6A+,4A)
+                                </div>
+
+                                <ul className={styles.descriptionList}>
+                                    <li>
+                                        Graduated high school and completed the Malaysian Certificate of Education with 10 As from the STEM stream.
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
